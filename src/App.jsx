@@ -23,6 +23,9 @@ import Library from './pages/admin/Library'
 import Announcement from './pages/admin/Announcement'
 import EventCalendar from './pages/admin/EventCalendar'
 import SettingsProfile from './pages/admin/SettingsProfile'
+import StudentAssignment from './pages/students/Assignment'
+import ExamsSection from './pages/students/Exams'
+import AttendanceSection from './pages/students/Attendance'
 
 function App() {
 
@@ -57,6 +60,26 @@ function App() {
       <Route path='/admin/announcement' element={<Announcement />}/>
       <Route path='/admin/event' element={<EventCalendar />}/>
       <Route path='/admin/settings' element={<SettingsProfile />}/>
+
+      {/* student section */}
+      <Route path='/student/assignment' element={<StudentAssignment />}/>
+      <Route path='/student/exam' element={<ExamsSection />}/>
+      <Route path='/student/attendance' element={<AttendanceSection />}/>
+      <Route path='/student/assignment' element={<StudentAssignment />}/>
+      <Route path='/student/assignment' element={<StudentAssignment />}/>
+      <Route path='/student/assignment' element={<StudentAssignment />}/>
+
+     {/* teacher section */}
+      <Route path='/teacher/classes' element={<StudentAssignment />}/>
+      <Route path='/teacher/exam' element={<ExamsSection />}/>
+      <Route path='/teacher/students' element={<AttendanceSection />}/>
+      <Route path='/teacher/assignment' element={<StudentAssignment />}/>
+      <Route path='/teacher/performances' element={<StudentAssignment />}/>
+      <Route path='/teacher/attendance' element={<StudentAssignment />}/>
+      <Route path='/teacher/communication' element={<StudentAssignment />}/>
+      <Route path='/teacher/events' element={<StudentAssignment />}/>
+      <Route path='/teacher/settings' element={<StudentAssignment />}/>
+
       </Routes>
     </div>
   )

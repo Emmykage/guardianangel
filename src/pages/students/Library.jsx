@@ -1,9 +1,18 @@
 import React from 'react'
+import { Content, LibraryContainer, LibraryHeader, SidebarContainer } from '../../styles/LibraryStyles'
+import Sidebar from './Sidebar'
 
-const Library = () => {
+const LibrarySection = () => {
   return (
-    <div>Library</div>
+    <LibraryContainer>
+      <SidebarContainer>
+        <Sidebar/>
+      </SidebarContainer>
+      <Content>
+        <LibraryHeader>Library</LibraryHeader>
+      </Content>
+    </LibraryContainer>
   )
 }
 
-export default Library
+export default LibrarySection

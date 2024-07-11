@@ -1,10 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {AdminDashboardContainer, BottomContent, Card, CardContainer, CardContent, CardTitle, Content, Section, SectionTitle, TopContent} from '../../styles/DashboardStyles'
-import EventCalendar from './EventCalendar'
 import Performance from './Performance'
 import Announcement from './Announcement'
 import Sidebar from './Sidebar'
+import axios from 'axios'
 const AdminDashboard = () => {
+    const [events, setEvent] = useState([])
+    const fetchEvents = async () => {
+        try {
+            const response = await axios.get('http://localhost:4000/api/v1/events')
+            setEvent(response.data.events || [])
+        } catch (error) {
+            console.error("Error fetching events: ", error)
+            
+        }
+    }
+
+    const fetchannouncements = async () => {
+        try {
+            const response = await axios.get('http://localhost:4000/api/v1/announcements')
+            setEvent(response.data.announcements || [])
+        } catch (error) {
+            console.error("Error fetching events: ", error)
+            
+        }
+    }
   return (
     <AdminDashboardContainer>
         <Sidebar/>
