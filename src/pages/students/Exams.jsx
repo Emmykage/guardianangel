@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { Content, ExamChartContainer, ExamContainer, ExamHeader, ExamResult, ExamResultsContainer, ExamSubject, SidebarContainer } from '../../styles/ExamStyles'
 import Sidebar from './Sidebar'
-import { Bar } from 'react-chartjs-2'
+// import { Bar } from 'react-chartjs-2'
 
 const ExamsSection = () => {
   const chartRef = useRef()

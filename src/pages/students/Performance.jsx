@@ -32,7 +32,7 @@ const PerformanceSection = () => {
         <PerformanceHeader>Performance</PerformanceHeader>
         <PerformanceInfo>
           <PerformanceGraphContainer>
-            <Line
+            {/* <Line
 
             data={lineChartData}
             options = {{
@@ -44,7 +44,7 @@ const PerformanceSection = () => {
                 }]
               }
             }}
-            />
+            /> */}
           </PerformanceGraphContainer>
           <TotalMarks>Total MArks: {performanceData.totalMarks}</TotalMarks>
         </PerformanceInfo>

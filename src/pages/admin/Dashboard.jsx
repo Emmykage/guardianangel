@@ -1,11 +1,20 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {AdminDashboardContainer, BottomContent, Card, CardContainer, CardContent, CardTitle, Content, Section, SectionTitle, TopContent} from '../../styles/DashboardStyles'
 import Performance from './Performance'
 import Announcement from './Announcement'
 import Sidebar from './Sidebar'
 import axios from 'axios'
 const AdminDashboard = () => {
+    const [isOpen, setIsOPen] = useState(true)
     const [events, setEvent] = useState([])
+    const [announcements, setAnnouncements] = useState([])
+    const [studentPerformances, setStudentPerformances] = useState([])
+
+    useEffect(()=> {
+        fetchAnnouncements()
+        fetchEvents()
+        fetchStudentPerformance()
+    }, [])
     const fetchEvents = async () => {
         try {
             const response = await axios.get('http://localhost:4000/api/v1/events')
@@ -16,12 +25,21 @@ const AdminDashboard = () => {
         }
     }
 
-    const fetchannouncements = async () => {
+    const fetchAnnouncements = async () => {
         try {
             const response = await axios.get('http://localhost:4000/api/v1/announcements')
             setEvent(response.data.announcements || [])
         } catch (error) {
             console.error("Error fetching events: ", error)
+            
+        }
+    }
+    const fetchStudentPerformance = async () => {
+        try {
+            const response = await axios.get('http://localhost:4000/api/v1/performances')
+            setEvent(response.data.performances || [])
+        } catch (error) {
+            console.error("Error fetching student Performance  : ", error)
             
         }
     }
@@ -57,8 +75,8 @@ const AdminDashboard = () => {
 
             <BottomContent>
                 {/* <h3>Bottom section</h3> */}
-                <Performance/>
-                    <Announcement/>
+                <Performance  studentPerformances={studentPerformances}/>
+                    <Announcement announcements={announcements}/>
                 {/* <Performance>
                     <SectionTitle> Announcement</SectionTitle>
 

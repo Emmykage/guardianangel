@@ -18,14 +18,8 @@ const Sidebar = () => {
                 <SidebarIcon><BsGraphUp/> </SidebarIcon>
                 <StyledLink to={'/student/dashboard'}>Dashboard</StyledLink>
             </SidebarNavItem>
-            <SidebarNavItem>
-                <SidebarIcon><BsGraphUp/> </SidebarIcon>
-                <StyledLink to={'/student/classes'}>Classes</StyledLink>
-            </SidebarNavItem>
-            <SidebarNavItem>
-                <SidebarIcon><BsGraphUp/> </SidebarIcon>
-                <StyledLink to={'/student/students'}>Students</StyledLink>
-            </SidebarNavItem>
+          
+          
             <SidebarNavItem>
                 <SidebarIcon><BsPeople/> </SidebarIcon>
                 <StyledLink to={'/student/teachers'}>Teachers</StyledLink>

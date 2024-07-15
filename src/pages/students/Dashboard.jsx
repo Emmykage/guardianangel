@@ -1,6 +1,5 @@
 import React from 'react'
 import {AdminDashboardContainer, BottomContent, Card, CardContainer, CardContent, CardTitle, Content, Section, SectionTitle, TopContent} from '../../styles/DashboardStyles'
-import EventCalendar from './EventCalendar'
 import Performance from './Performance'
 import Announcement from './Announcement'
 import Sidebar from './Sidebar'

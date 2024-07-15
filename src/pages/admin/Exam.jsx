@@ -1,9 +1,58 @@
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Sidebar from './Sidebar'
 import { AddButton, Content, ExamContainer, ExamForm, ExamHeader, FormInput, FormLabel, SidebarContainer } from '../../styles/ExamStyles'
+import axios from 'axios'
 
 const Exam = () => {
+    const [examData, setExamData] = useState([])
+    const [name, setName] = useState([])
+    const [registrationNumber, setRegistrationNumber] = useState['']
+    const [className, setClassName] = useState('')
+    const [marks, setMarks] = useState('')
+    useEffect(()=> {
+        fetchExams()
+    },[])
+    
+  const fetchExams = async () => {
+    try {
+      const response = await axios.get('http://localhost:4000/api/v1/exams')
+      if(Array.isArray(response.data.exams)){
+        setExamData(response.data)
+  
+      }else{
+        console.log("Error while fetching assignments:", response.data)
+      }
+  } catch (error) {
+      console.error("Error fetching assignments: ", error)
+      
+  }
+  }
+  
+  const handleAddExam = async (e) => {
+
+    e.preventDefault()
+
+    const newExam = {name, registrationNumber, className, marks: parseInt(marks)}
+      try {
+        const response = await axios.post('http://localhost:4000/api/v1/exams', newExam);
+        if(typeof response.data === "object"){
+            setExamData([...examData, response.data]);
+            setName('')
+            setRegistrationNumber('')
+            setClassName('')
+            setMarks('')
+        }else{
+            console.log("Error: API response data not an object")
+        }
+        
+        
+      } catch (error) {
+        console.error("Error adding Exam: ", error)
+        
+    }
+    }
+  
     const calculateTotalMarks = () => {
         let total = 0;
         for (let i = 0; i < examData.length; i++  ){
@@ -21,7 +70,7 @@ const Exam = () => {
                 <ExamHeader>
                     Exam Details
                 </ExamHeader>
-                <ExamForm>
+                <ExamForm onSubmit={handleAddExam}>
                     
                     <FormLabel>Name:</FormLabel>
                     <FormInput

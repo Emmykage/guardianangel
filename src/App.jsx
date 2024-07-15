@@ -65,7 +65,7 @@ function App() {
       <Route path='/student/assignment' element={<StudentAssignment />}/>
       <Route path='/student/exam' element={<ExamsSection />}/>
       <Route path='/student/attendance' element={<AttendanceSection />}/>
-      <Route path='/student/assignment' element={<StudentAssignment />}/>
+      <Route path='/student/classes' element={<StudentCl />}/>
       <Route path='/student/assignment' element={<StudentAssignment />}/>
       <Route path='/student/assignment' element={<StudentAssignment />}/>
 
