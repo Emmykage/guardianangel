@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { AttendanceContainer, AttendanceContent, AttendanceHeader, AttendanceItem, AttendanceList, CheckboxLabel, Content, StudentName, SubmitButton } from '../../styles/AttendanceStyles'
 import Sidebar from './Sidebar'
+import axios from 'axios'
 
 
 const TeacherAttendance = () => {

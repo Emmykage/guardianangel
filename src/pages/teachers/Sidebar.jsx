@@ -40,27 +40,24 @@ const Sidebar = () => {
             </SidebarNavItem>
             <SidebarNavItem>
                 <SidebarIcon><BsGraphDown/> </SidebarIcon>
-                <StyledLink to={'/teacher/performance'}>Performance</StyledLink>
+                <StyledLink to={'/teacher/performances'}>Performance</StyledLink>
             </SidebarNavItem>
             <SidebarNavItem>
                 <SidebarIcon><BsGraphUp/> </SidebarIcon>
-                <StyledLink to={'/teacher/attendance'}>Attendance</StyledLink>
+                <StyledLink to={'/teacher/attendances'}>Attendance</StyledLink>
             </SidebarNavItem>  
-             <SidebarNavItem>
-                <SidebarIcon><BsGraphUp/> </SidebarIcon>
-                <StyledLink to={'/teacher/communication'}>Communication</StyledLink>
-            </SidebarNavItem>
-            <SidebarNavItem>
+             
+            {/* <SidebarNavItem>
                 <SidebarIcon><BsBook/> </SidebarIcon>
                 <StyledLink to={'/teacher/library'}>Library</StyledLink>
-            </SidebarNavItem>
+            </SidebarNavItem> */}
             <SidebarNavItem>
                 <SidebarIcon><BsChatDots/> </SidebarIcon>
-                <StyledLink to={'/teacher/announcement'}>Announcement</StyledLink>
+                <StyledLink to={'/teacher/announcements'}>Announcement</StyledLink>
             </SidebarNavItem>
             <SidebarNavItem>
                 <SidebarIcon><BsCalendarEvent/> </SidebarIcon>
-                <StyledLink to={'/teacher/event'}>Events and Calendar</StyledLink>
+                <StyledLink to={'/teacher/events'}>Events and Calendar</StyledLink>
             </SidebarNavItem>
             <SidebarNavItem>
                 <SidebarIcon><BsGear/> </SidebarIcon>

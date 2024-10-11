@@ -20,7 +20,7 @@ const TeacherSettingsProfile = () => {
 
       </SidebarContainer>
       <Content>
-        <ProfileHeader>Prfile Details</ProfileHeader>
+        <ProfileHeader>Profile Details</ProfileHeader>
         <ProfileDetails>
         <ProfileLabel>Name:</ProfileLabel>
         <ProfileInfo>{teacherInfo.name}</ProfileInfo>

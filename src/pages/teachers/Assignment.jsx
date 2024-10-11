@@ -1,9 +1,10 @@
-import React from 'react'
-import { AddAssignmentButton, AddAssignmentForm, AddAssignmentInput, AddAssignmentTextArea, AssignmentList, AssignmentsContainer, AssignmentsContent, AssignmentsHeader } from '../../styles/AssignmentsStyles'
+import React, { useEffect, useState } from 'react'
+import { AddAssignmentButton, AddAssignmentForm, AddAssignmentInput, AddAssignmentTextArea, AssignmentItem, AssignmentList, AssignmentsContainer, AssignmentsContent, AssignmentsHeader } from '../../styles/AssignmentsStyles'
 import Sidebar from './Sidebar'
 import { Content } from '../../styles/LibraryStyles'
+import axios from 'axios'
 
-const Assignment = () => {
+const TeacherAssignment = () => {
     const [newAssignment, setNewAssignment] = useState({title: "", description: "", grade: "", deadline: ""})
     const [assignments, setAssignments] = useState([])
     useEffect(()=> {
@@ -98,4 +99,4 @@ Add Assignment
   )
 }
 
-export default Assignment
+export default TeacherAssignment

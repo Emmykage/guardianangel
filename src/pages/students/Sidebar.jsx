@@ -17,16 +17,11 @@ const Sidebar = () => {
             <SidebarNavItem>
                 <SidebarIcon><BsGraphUp/> </SidebarIcon>
                 <StyledLink to={'/student/dashboard'}>Dashboard</StyledLink>
-            </SidebarNavItem>
-          
-          
-            <SidebarNavItem>
-                <SidebarIcon><BsPeople/> </SidebarIcon>
-                <StyledLink to={'/student/teachers'}>Teachers</StyledLink>
-            </SidebarNavItem>
+            </SidebarNavItem>          
+        
             <SidebarNavItem>
                 <SidebarIcon><BsFileText/> </SidebarIcon>
-                <StyledLink to={'/student/assignments'}>Assignment</StyledLink>
+                <StyledLink to={'/student/assignment'}>Assignment</StyledLink>
             </SidebarNavItem>
             <SidebarNavItem>
                 <SidebarIcon><BsBook/> </SidebarIcon>
@@ -48,13 +43,11 @@ const Sidebar = () => {
                 <SidebarIcon><BsChatDots/> </SidebarIcon>
                 <StyledLink to={'/student/announcement'}>Announcement</StyledLink>
             </SidebarNavItem>
-            <SidebarNavItem>
-                <SidebarIcon><BsCalendarEvent/> </SidebarIcon>
-                <StyledLink to={'/admin/event'}>Events and Profile</StyledLink>
-            </SidebarNavItem>
+            
+            
             <SidebarNavItem>
                 <SidebarIcon><BsGear/> </SidebarIcon>
-                <StyledLink to={'/student/settings'}>Settings and Profile</StyledLink>
+                <StyledLink to={'/student/profile'}>Settings and Profile</StyledLink>
             </SidebarNavItem>
 
             <ToggleButton onClick={toggleSidebar}>

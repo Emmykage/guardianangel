@@ -1,10 +1,11 @@
 
 
-import React from 'react'
-import { AnnouncementContainer, AnnouncementForm, AnnouncementList, Button, Content, FormGroup, Label, TextArea, Title } from '../../styles/AnnouncementStyles'
+import React, { useEffect, useState } from 'react'
+import { AnnouncementContainer, AnnouncementForm, AnnouncementItem, AnnouncementList, AnnouncementTitle, Button, Content, FormGroup, Label, TextArea, Title } from '../../styles/AnnouncementStyles'
 import Sidebar from './Sidebar'
+import axios from 'axios'
 
-const Announcement = () => {
+const TeacherAnnouncement = () => {
   const [announcement, setAnnouncement] = useState({name: "", email: "", subject: ""})
   const [announcements, setAnnouncements] = useState([])
   useEffect(()=> {
@@ -80,4 +81,4 @@ const handleSubmit = async (e) => {
   )
 }
 
-export default Announcement
+export default TeacherAnnouncement

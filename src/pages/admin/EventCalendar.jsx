@@ -4,7 +4,7 @@ import Sidebar from './Sidebar'
 import axios from 'axios'
 
 const EventCalendar = () => {
-  const [events, setEvents] = useState('')
+  const [events, setEvents] = useState([])
   const [error, setError] = useState("")
   const [newEvent, setNewEvent] = useState()
 

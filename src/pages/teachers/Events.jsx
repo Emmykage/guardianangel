@@ -1,9 +1,10 @@
-import React from 'react'
-import { AddEventButton, AddEventForm, CalendarContainer, Content, EventCalendarContainer, EventInput, Events } from '../../styles/EventCalendarStyles'
+import React, { useEffect, useState } from 'react'
+import { AddEventButton, AddEventForm, CalendarContainer, Content, Event, EventCalendarContainer, EventInput, Events } from '../../styles/EventCalendarStyles'
 import Sidebar from './Sidebar'
+import axios from 'axios'
 
 const TeacherEventCalendar = () => {
-  const [events, setEvents] = useState('')
+  const [events, setEvents] = useState([])
   const [error, setError] = useState("")
   const [newEvent, setNewEvent] = useState()
 

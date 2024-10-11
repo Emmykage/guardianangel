@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { AddAssignmentForm, AssignmentButton, AssignmentCard, AssignmentDescription, AssignmentDoneMessage, AssignmentsContainer, AssignmentTitle, Content, SidebarContainer } from '../../styles/AssignmentsStyles'
 import Sidebar from './Sidebar'
+import axios from 'axios'
 
 const StudentAssignment = () => {
 
@@ -23,6 +24,11 @@ const fetchAssignments = async () => {
     
 }
 }
+
+
+const handleDoAssignment = (id) => {
+  // Implement your logic for handling assignment submission
+};
 
   return (
     <AssignmentsContainer>
@@ -53,6 +59,7 @@ const AssignmentForm = ({onDoAssignment}) => {
   const [opinion, setOpinion ] = useState('')
 
   const handleSubmit = (e) => {
+    e.preventDefault()
     if(opinion.trim !== ''){
       onDoAssignment(); 
 

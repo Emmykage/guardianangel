@@ -3,7 +3,7 @@ import { Content, ExamChartContainer, ExamContainer, ExamHeader, ExamResult, Exa
 import Sidebar from './Sidebar'
 // import { Bar } from 'react-chartjs-2'
 
-const ExamsSection = () => {
+const StudentExamsSection = () => {
   const chartRef = useRef()
   const examResultData = {
     subjects: ["Maths", "Science", "English", "Hisory"],
@@ -65,4 +65,4 @@ const ExamsSection = () => {
   )
 }
 
-export default ExamsSection
+export default StudentExamsSection

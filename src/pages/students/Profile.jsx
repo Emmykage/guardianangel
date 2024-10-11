@@ -3,7 +3,7 @@ import { Content, Label, ProfileContainer, ProfileDetail, ProfileHeader, Profile
 import { SidebarContainer } from '../../styles/SidebarStyles'
 import Sidebar from './Sidebar'
 
-const ProfileSection = () => {
+const StudentProfileSection = () => {
   const studentProfile = {
     name: "Jonny Doe",
     age: "19",
@@ -39,4 +39,4 @@ const ProfileSection = () => {
   )
 }
 
-export default ProfileSection
+export default StudentProfileSection

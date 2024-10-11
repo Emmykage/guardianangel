@@ -4,11 +4,11 @@ import { SidebarContainer } from '../../styles/SidebarStyles'
 import Sidebar from './Sidebar'
 import axios from 'axios'
 
-const TeacherAnnouncementSection = () => {
+const StudentAnnouncementSection = () => {
   // const [announcement, setAnnouncement] = useState({name: "", email: "", subject: ""})
   const [announcements, setAnnouncements] = useState([])
   useEffect(()=> {
-          // fetchAnnouncements()
+          fetchAnnouncements()
   },[])
   
 const fetchAnnouncements = async () => {
@@ -49,4 +49,4 @@ const fetchAnnouncements = async () => {
   )
 }
 
-export default TeacherAnnouncementSection  
+export default StudentAnnouncementSection  

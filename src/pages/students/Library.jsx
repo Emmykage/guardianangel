@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { BookAuthor, BookItem, BookList, BookTitle, BorrowButton, Content, LibraryContainer, LibraryHeader, SidebarContainer } from '../../styles/LibraryStyles'
 import Sidebar from './Sidebar'
+import axios from 'axios'
 
-const LibrarySection = () => {
+const StudentLibrarySection = () => {
 
   
   const [books, setBooks] = useState([])
@@ -49,4 +50,4 @@ const LibrarySection = () => {
   )
 }
 
-export default LibrarySection
+export default StudentLibrarySection

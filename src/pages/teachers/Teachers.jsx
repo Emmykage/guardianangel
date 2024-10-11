@@ -1,6 +1,7 @@
-import React from 'react'
-import { TeacherList, TeachersContainer, Content,TeachersHeader } from '../../styles/TeachersStyles'
+import React, { useEffect, useState } from 'react'
+import { TeacherList, TeachersContainer, Content,TeachersHeader, TeachersContent, AddTeacherForm, AddTeacherInput, AddTeacherButton, TeacherItem } from '../../styles/TeachersStyles'
 import Sidebar from './Sidebar'
+import axios from 'axios'
 
 const TeachersTeacher = () => {
   const [newTeacher, setNewTeacher] = useState({name: "", email: "", subject: ""})

@@ -1,9 +1,11 @@
-import React from 'react'
-import { ClassContainer,Content, ClassHeader, ClassList, SidebarContainer } from '../../styles/ClassesStyles'
+import React, { useEffect, useState } from 'react'
+import { ClassContainer,Content, ClassHeader, ClassList, SidebarContainer, ClassesContainer, ClassesContent, AddClassForm, AddClassInput, AddClassButton, ClassItem } from '../../styles/ClassesStyles'
 import Sidebar from './Sidebar'
+import axios from 'axios'
+// import { useSelector } from 'react-redux'
 
 const TeacherClasses = () => {
-  
+  // const {classer} = useSelector
   const [newClassName, setNewClassName] = useState('')
   const [classes, setClasses] = useState([])
 

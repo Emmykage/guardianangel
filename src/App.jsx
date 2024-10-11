@@ -3,7 +3,7 @@
 
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import Home from './components/Home'
+// import Home from './components/Home'
 import Screen from './components/Screen'
 import ChooseUser from './components/ChooseUser'
 import TeacherSignin from './components/TeacherSignin'
@@ -26,6 +26,23 @@ import SettingsProfile from './pages/admin/SettingsProfile'
 import StudentAssignment from './pages/students/Assignment'
 import ExamsSection from './pages/students/Exams'
 import AttendanceSection from './pages/students/Attendance'
+import StudentExamsSection from './pages/students/Exams'
+import StudentPerformanceSection from './pages/students/Performance'
+import StudentLibrarySection from './pages/students/Library'
+import StudentProfileSection from './pages/students/Profile'
+import StudentAnnouncementSection from './pages/students/Announcement'
+import TeacherClasses from './pages/teachers/Classes'
+import TeacherStudent from './pages/teachers/Student'
+import TeacherExames from './pages/teachers/Exames'
+import TeacherAssignment from './pages/teachers/Assignment'
+import TeacherPerformanceSection from './pages/teachers/Performance'
+import TeacherAttendance from './pages/teachers/Attendance'
+import TeacherEventCalendar from './pages/teachers/Events'
+import TeacherSettingsProfile from './pages/teachers/Profile'
+import TeacherAnnouncement from './pages/teachers/Announcement'
+import ErrorPage from './pages/ErrorPage'
+import TeachersTeacher from './pages/teachers/Teachers'
+import Home from './pages'
 
 function App() {
 
@@ -33,7 +50,7 @@ function App() {
   return (
     <div className='h-screen'>
       <Routes>
-      {/* <Route path='/' element={<Screen />}/> */}
+      <Route path='*' element={<ErrorPage />}/>
 
       <Route path='/' element={<Home />}/>
       <Route path='/choose-user' element={<ChooseUser />}/>
@@ -61,24 +78,26 @@ function App() {
       <Route path='/admin/event' element={<EventCalendar />}/>
       <Route path='/admin/settings' element={<SettingsProfile />}/>
 
-      {/* student section */}
+      {/* student section */} 
       <Route path='/student/assignment' element={<StudentAssignment />}/>
-      <Route path='/student/exam' element={<ExamsSection />}/>
+      <Route path='/student/announcement' element={<StudentAnnouncementSection />}/>
+      <Route path='/student/profile' element={<StudentProfileSection />}/>
       <Route path='/student/attendance' element={<AttendanceSection />}/>
-      <Route path='/student/classes' element={<StudentCl />}/>
-      <Route path='/student/assignment' element={<StudentAssignment />}/>
-      <Route path='/student/assignment' element={<StudentAssignment />}/>
+      <Route path='/student/exams' element={<StudentExamsSection />}/>
+      <Route path='/student/performance' element={<StudentPerformanceSection />}/>
+      <Route path='/student/library' element={<StudentLibrarySection />}/>
 
      {/* teacher section */}
-      <Route path='/teacher/classes' element={<StudentAssignment />}/>
-      <Route path='/teacher/exam' element={<ExamsSection />}/>
-      <Route path='/teacher/students' element={<AttendanceSection />}/>
-      <Route path='/teacher/assignment' element={<StudentAssignment />}/>
-      <Route path='/teacher/performances' element={<StudentAssignment />}/>
-      <Route path='/teacher/attendance' element={<StudentAssignment />}/>
-      <Route path='/teacher/communication' element={<StudentAssignment />}/>
-      <Route path='/teacher/events' element={<StudentAssignment />}/>
-      <Route path='/teacher/settings' element={<StudentAssignment />}/>
+      <Route path='/teacher/classes' element={<TeacherClasses />}/>
+      <Route path='/teacher/exams' element={<TeacherExames />}/>
+      <Route path='/teacher/students' element={<TeacherStudent />}/>
+      <Route path='/teacher/teachers' element={<TeachersTeacher />}/>
+      <Route path='/teacher/assignments' element={<TeacherAssignment />}/>
+      <Route path='/teacher/performances' element={<TeacherPerformanceSection />}/>
+      <Route path='/teacher/attendances' element={<TeacherAttendance />}/>
+      <Route path='/teacher/announcements' element={<TeacherAnnouncement />}/>
+      <Route path='/teacher/events' element={<TeacherEventCalendar />}/>
+      <Route path='/teacher/settings' element={<TeacherSettingsProfile />}/>
 
       </Routes>
     </div>

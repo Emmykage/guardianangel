@@ -3,7 +3,7 @@ import { Content, PerformanceContainer, PerformanceGraphContainer, PerformanceHe
 import Sidebar from './Sidebar'
 import { Line } from 'react-chartjs-2'
 
-const PerformanceSection = () => {
+const StudentPerformanceSection = () => {
 
   const performanceData = {
     months: ["jan", "Feb", "Mar", "Apr", "May", "Jun"],
@@ -53,4 +53,4 @@ const PerformanceSection = () => {
   )
 }
 
-export default PerformanceSection
+export default StudentPerformanceSection
