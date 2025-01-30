@@ -1,14 +1,11 @@
 
 import Header from '../../components/header/Header'
-import Navbar from '../../components/nav/Navbar'
 
-const AboutUs = () => {
+const Information = () => {
   return (
     <div>
       <Header/>
    
-        
-        {/* <NavLink */}
         <div>
           <h2 className='text-3xl font-medium'>At Guardian Angel we are committed to </h2>
 
@@ -18,4 +15,4 @@ const AboutUs = () => {
   )
 }
 
-export default AboutUs
+export default Information

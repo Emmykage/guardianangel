@@ -2,7 +2,7 @@
 import Header from '../../components/header/Header'
 import Navbar from '../../components/nav/Navbar'
 
-const AboutUs = () => {
+const ContactUs = () => {
   return (
     <div>
       <Header/>
@@ -18,4 +18,4 @@ const AboutUs = () => {
   )
 }
 
-export default AboutUs
+export default ContactUs

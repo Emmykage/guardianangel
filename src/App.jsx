@@ -24,7 +24,7 @@ import Announcement from './pages/admin/Announcement'
 import EventCalendar from './pages/admin/EventCalendar'
 import SettingsProfile from './pages/admin/SettingsProfile'
 import StudentAssignment from './pages/students/Assignment'
-import ExamsSection from './pages/students/Exams'
+// import ExamsSection from './pages/students/Exams'
 import AttendanceSection from './pages/students/Attendance'
 import StudentExamsSection from './pages/students/Exams'
 import StudentPerformanceSection from './pages/students/Performance'
@@ -43,6 +43,10 @@ import TeacherAnnouncement from './pages/teachers/Announcement'
 import ErrorPage from './pages/ErrorPage'
 import TeachersTeacher from './pages/teachers/Teachers'
 import Home from './pages'
+import MainLayout from './layouts/MainLayout'
+import AboutUs from './pages/about-us'
+import ContactUs from './pages/contact-us'
+import Information from './pages/information'
 
 function App() {
 
@@ -52,7 +56,22 @@ function App() {
       <Routes>
       <Route path='*' element={<ErrorPage />}/>
 
-      <Route path='/' element={<Home />}/>
+
+      <Route path='/choose-user' element={<ChooseUser />}/>
+
+      <Route path='/' element={<MainLayout><Home/> </MainLayout> }/>
+
+      {/* <Route path='home' element={<><Home /></> }/> */}
+
+      {/* <Route path='/prospectus' element={<><Home /></> }/> */}
+
+
+      <Route path='/about-us' element={<><AboutUs /></> }/>
+      <Route path='/information' element={<><Information /></> }/>
+      <Route path='/contact-us' element={<><ContactUs /></> }/>
+
+
+      
       <Route path='/choose-user' element={<ChooseUser />}/>
       <Route path='/admin-signin' element={<AdminSignIn />}/>
       <Route path='/student-signin' element={<StudentSignIn />}/>

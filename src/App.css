@@ -7,3 +7,14 @@
 .navlink:hover ul {
     display: block;
 }
+
+
+.bg-custom {
+    background-image:linear-gradient(to right, rgba(0,0,0,0.5), rgba(128, 128, 128, 0.363)), url("/src/assets/slider.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /* background-color: rgba(137, 43, 226, 0.514); */
+}
+

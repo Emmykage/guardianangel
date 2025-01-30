@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Navbar = styled.nav`
-  position: fixed;
+  // position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -111,10 +111,10 @@ export const HomeContainer = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: linear-gradient(45deg, #6BD4E7, #6FC3DF);
+  // background: linear-gradient(45deg, #6BD4E7, #6FC3DF);
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
+  // min-height: 100vh;
   padding-top: 80px;
 
   @media screen and (max-width: 768px) {

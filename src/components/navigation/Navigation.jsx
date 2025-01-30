@@ -1,5 +1,5 @@
 import React from 'react'
-import {ButtonsContainer, GuestButton, HomeContainer, LoginButton, Logo, LoremTextContainer, NavLink as Linker, Navbar, NavigationLinks, SchoolImage, SchoolInfo, Title} from '../../styles/styles'
+import {ButtonsContainer, GuestButton, LoginButton, Logo, NavLink as Linker, Navbar, NavigationLinks} from '../../styles/styles'
 import { NavLink, useNavigate } from 'react-router-dom'
 import bg1 from '../../assets/bg1.png'
 
