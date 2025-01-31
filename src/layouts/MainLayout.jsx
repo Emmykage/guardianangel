@@ -1,5 +1,6 @@
 // import React from 'react'
 
+import PropTypes from "prop-types"
 import SideNav from "../components/sideNav/SideNav"
 
 const MainLayout = ({children}) => {
@@ -17,6 +18,6 @@ const MainLayout = ({children}) => {
 }
 
 MainLayout.propTypes = {
-  children: 
+  children: PropTypes.node
 }
 export default MainLayout
