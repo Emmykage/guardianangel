@@ -47,6 +47,7 @@ import MainLayout from './layouts/MainLayout'
 import AboutUs from './pages/about-us'
 import ContactUs from './pages/contact-us'
 import Information from './pages/information'
+import NewsEvent from './pages/news-event'
 
 function App() {
 
@@ -67,6 +68,7 @@ function App() {
 
 
       <Route path='/about-us' element={<><AboutUs /></> }/>
+      <Route path='/news-events' element={<><NewsEvent /></> }/>
       <Route path='/information' element={<><Information /></> }/>
       <Route path='/contact-us' element={<><ContactUs /></> }/>
 

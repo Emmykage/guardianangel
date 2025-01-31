@@ -1,6 +1,5 @@
 // import React from 'react'
 
-import { Outlet } from "react-router-dom"
 import SideNav from "../components/sideNav/SideNav"
 
 const MainLayout = ({children}) => {
@@ -17,4 +16,7 @@ const MainLayout = ({children}) => {
   )
 }
 
+MainLayout.propTypes = {
+  children: 
+}
 export default MainLayout

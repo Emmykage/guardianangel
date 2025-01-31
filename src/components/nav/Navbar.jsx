@@ -49,7 +49,7 @@ const Navbar = () => {
         
         </li>
         <li  className='navlink relative'>
-        <NavLink  className={({isActive})=> isActive ? active : inActive} to="/new-event">     News and Events    </NavLink>
+        <NavLink  className={({isActive})=> isActive ? active : inActive} to="/news-events">     News and Events    </NavLink>
 
         <ul className='bg-theme/60 max-w-72 w-max text-white top-full left-0 absolute border border-gray-200 shadow pl-3 pr-10 py-4 rounded-bl-xl rounded-br-xl'>
                 <li><NavLink>School Calendar Us </NavLink> </li>
