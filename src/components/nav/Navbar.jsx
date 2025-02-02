@@ -27,7 +27,7 @@ const Navbar = () => {
 
         </span>
         <div className={`gap-4 bg-gray-00/20 sm:px-12 md:px-20 py-10 rounded`}>
-            <ul className={`${toggle ? "right-0" : "right-full"} py-10 sm:py-1 bg-theme/60 sm:bg-transparent justify-end  transition-all ease-linear duration-300 w-full sm:flex px-6 fixed sm:static min-h-96 sm:min-h-10  sm:h-max  block  text-white gap-6 text-lg font-medium link`}>
+            <ul className={`${toggle ? "right-0" : "right-full"} py-10 sm:py-1 bg-theme/90 sm:bg-transparent justify-end  transition-all ease-linear duration-300 w-full sm:flex px-6 fixed sm:static min-h-96 sm:min-h-10  sm:h-max  block  text-white gap-6 text-lg font-medium link`}>
 
                 <li  className='navlink relative'> 
                     <NavLink className={({isActive})=> isActive ? active : inActive} to="/about-us">About Us </NavLink>
