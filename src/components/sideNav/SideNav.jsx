@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom'
 
 const SideNav = () => {
   return (
-<aside className="bg-librar blur-non grid overflow-y-auto gap-0">
+<aside className="sm:grid  blur-non hidden overflow-y-auto gap-0">
   <div className="box-items item-1 relative g-[url('/src/assets/background/library.jpg')] bg-cover bg-center flex items-center text-white justify-center">
         <button className='text-white  hover:text-gray-950'>
         <FaSchool className='text-6xl' />   

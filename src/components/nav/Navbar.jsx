@@ -1,57 +1,59 @@
-import React from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 import './navbar.scss'
+import { AiOutlineMenuFold } from 'react-icons/ai'
 
 const Navbar = () => {
-    const navigate = useNavigate()
+
+    const [toggle, setToggle] = useState(false)
 
     const active = "text-primary"
     const inActive = "text-alt"
 
-    const handleLoginClick = ()=> {
-        navigate('/choose-user')
 
-    }
+
+
+    // const handleLoginClick = ()=> {
+    //     navigate('/choose-user')
+
+    // }
   return (
     <header className='navigation top py-5'>
 
-    <nav className='flex py-10 justify-end items-center  px-20'>
+    <nav className='bg-re'>
+        <span onClick={() => setToggle(prev => !prev)} className='h-10 flex sm:hidden justify-center items-center w-10 '>
+            <AiOutlineMenuFold className='text-white font-bold text-3xl'/>
 
-        <div className='flex gap-4 bg-gray-00/20 px-20 py-10 rounded'>
-            <ul className='flex gap-6 text-white text-lg font-medium'>
+        </span>
+        <div className={`gap-4 bg-gray-00/20 sm:px-12 md:px-20 py-10 rounded`}>
+            <ul className={`${toggle ? "right-0" : "right-full"} py-10 sm:py-1 bg-theme/60 sm:bg-transparent justify-end  transition-all ease-linear duration-300 w-full sm:flex px-6 fixed sm:static min-h-96 sm:min-h-10  sm:h-max  block  text-white gap-6 text-lg font-medium link`}>
 
-        <li  className='navlink relative'> 
-            <NavLink className={({isActive})=> isActive ? active : inActive} to="/about-us">About Us </NavLink>
-            <ul className='bg-theme/60 max-w-72 w-max text-white top-full left-0 absolute border border-gray-200/30 shadow pl-3 pr-20 py-4 rounded-bl-xl rounded-br-xl'>
-                <li><NavLink to={""}>Welcome </NavLink> </li>
-                <li><NavLink to={""}>Vission and Mission </NavLink> </li>
-                {/* <li><NavLink to={""}>Meet Our Team </NavLink> </li>
-                <li><NavLink to={""}>Board </NavLink> </li>
-                <li><NavLink to={""}>Our Nursery </NavLink> </li> */}
-           
-            </ul>
-            </li>
-        <li  className='navlink relative '>
-        <NavLink  className={({isActive})=> isActive ? active : inActive} to="/information">Information </NavLink>
+                <li  className='navlink relative'> 
+                    <NavLink className={({isActive})=> isActive ? active : inActive} to="/about-us">About Us </NavLink>
+                    <ul className='bg-theme/60 max-w-full sm:min-w-max text-nowrap text-white top-full left-0 sm:absolute border transition-all ease-linear duration-300 border-gray-200/30 shadow pl-3 pr-20 py-4 sm:rounded-bl-xl sm:rounded-br-xl'>
+                        <li className='transition-all ease-linear duration-300'><NavLink to={""}>Welcome </NavLink> </li>
+                        <li><NavLink to={""}>Vission and Mission </NavLink> </li>                     
+                
+                    </ul>
+                </li>
+                <li className='navlink relative transition-all ease-linear duration-300 '>
+                <NavLink  className={({isActive})=> isActive ? active : inActive} to="/information">Information </NavLink>
 
-        
-        <ul className='bg-theme/60 max-w-72 w-max text-white top-full left-0 absolute border border-gray-200 shadow pl-3 pr-10 py-4 rounded-bl-xl rounded-br-xl'>
-                <li><NavLink>Admission </NavLink> </li>
-                <li><NavLink>Curriculum </NavLink> </li>
-                {/* <li><NavLink>Policies and Documents  </NavLink></li>
-                <li><NavLink>Data Protection               </NavLink></li>
-                <li><NavLink>Attendance  </NavLink></li>
-                <li><NavLink>Feedback and Comliaints  </NavLink>        </li> */}
-           
-            </ul>
-        
-        
-        </li>
+                
+                <ul className='bg-theme/60 max-w-full sm:w-max sm:min-w-max text-white top-full left-0 sm:absolute border transition-all ease-linear duration-300 border-gray-200/30 shadow pl-3 pr-20 py-4 sm:rounded-bl-xl sm:rounded-br-xl'>
+                        <li><NavLink>Admission </NavLink> </li>
+                        <li><NavLink>Curriculum </NavLink> </li>
+                    
+                
+                    </ul>
+                
+                
+                </li>
         <li  className='navlink relative'>
         <NavLink  className={({isActive})=> isActive ? active : inActive} to="/news-events">     News and Events    </NavLink>
 
-        <ul className='bg-theme/60 max-w-72 w-max text-white top-full left-0 absolute border border-gray-200 shadow pl-3 pr-10 py-4 rounded-bl-xl rounded-br-xl'>
+        <ul className='bg-theme/60 max-w-full sm:w-max sm:min-w-max text-white top-full left-0 sm:absolute border transition-all ease-linear duration-300 border-gray-200/30 shadow pl-3 pr-20 py-4 sm:rounded-bl-xl sm:rounded-br-xl'>
                 <li><NavLink>School Calendar Us </NavLink> </li>
                 <li><NavLink>Term Dates </NavLink> </li>
                 <li><NavLink>Curriculum </NavLink> </li>
@@ -65,7 +67,7 @@ const Navbar = () => {
         </li>
         <li   className='navlink relative'>
             <NavLink className={({isActive})=> isActive ? active : inActive} to="/contact-us">Contact Us </NavLink> 
-            <ul className='bg-theme/60 w-max text-white top-full right-0 absolute border border-gray-200 shadow pl-3 pr-10 py-4 rounded-bl-xl rounded-br-xl'>
+            {/* <ul className='bg-theme/60 max-w-72 w-max text-white top-full left-0 sm:absolute border transition-all ease-linear duration-300 border-gray-200/30 shadow pl-3 pr-20 py-4 sm:rounded-bl-xl sm:rounded-br-xl'>
                     <li><NavLink>Parent Information Hub
                     </NavLink> </li>
                     <li><NavLink>Forms and Application Packs
@@ -79,58 +81,15 @@ const Navbar = () => {
                     <li><NavLink>School Clubs  </NavLink></li>
                 
             
-                </ul>    
+                </ul>     */}
          </li>
-        {/* <li href="#" className='navlink relative '>
-            <NavLink to={""}>Children</NavLink>
-            
-            
-        <ul className='bg-theme/60  text-white top-full left-0 absolute border border-gray-200 shadow pl-3 pr-10 py-4 rounded-bl-xl rounded-br-xl'>
-                <li><NavLink>School Ambassador
-
-                </NavLink> </li>
-                <li><NavLink>Keeping Safe
-
-                </NavLink> </li>
-                <li><NavLink>School Council
-
-                </NavLink> </li>
-                
-             
-           
-            </ul> 
-        </li> */}
-        {/* <li  className='navlink relative bg-green'><NavLink to="#">Gallery</NavLink> </li> */}
-        {/* <li  className='navlink relative'>
-            <NavLink to="#">   Join Us</NavLink>
-        
-        
-        <ul className='bg-purple-900 text-white top-full left-0 absolute border border-gray-200 shadow pl-3 pr-10 py-4 rounded-bl-xl rounded-br-xl'>
-                <li><NavLink>Teacher Training
-
-
-                </NavLink> </li>
-                <li><NavLink>Vacancy 
-
-                </NavLink> </li>
-                <li><NavLink>volunteers
-
-                </NavLink> </li>
-                
-             
-           
-            </ul>
-          </li> */}
+       
 
             </ul>
 
 
         </div>
-        {/* <div>
-            <button onClick={handleLoginClick}>Sign In</button>
-            <button onClick={handleLoginClick}>Guest Mode</button>
-            
-        </div> */}
+     
         
     </nav>
 

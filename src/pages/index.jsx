@@ -3,12 +3,12 @@ import { useNavigate } from 'react-router-dom'
 // import {ButtonsContainer, GuestButton, HomeContainer, LoginButton, Logo, LoremTextContainer, NavLink as Linker, Navbar, NavigationLinks, SchoolImage, SchoolInfo, Title} from '../styles/styles'
 import { LoremIpsum } from 'lorem-ipsum'
 // import Nav from '../components/nav/Navigation'
-import { HomeContainer, LoremTextContainer, SchoolImage, SchoolInfo } from '../styles/styles'
-import { Title } from '../styles/ChooseUserStyles'
+// import { HomeContainer, LoremTextContainer, SchoolImage, SchoolInfo } from '../styles/styles'
+// import { Title } from '../styles/ChooseUserStyles'
 // import bg from '../assets/bg.png'
 // import Nav from './navigation/Navigation'
 // import bg from '../assets/bg.png'
-import bg from '../assets/bg.png'
+// import bg from '../assets/bg.png'
 import Navbar from '../components/nav/Navbar'
 import logo from '../assets/logo/logo.png'
 
@@ -25,13 +25,13 @@ const Home = () => {
     }
   return (
 
-    <div className='px-0 bg-custom h-full flex justify-between flex-col'>
+    <div className='px-0 bg-custom w-full bg-red-600 h-full flex justify-between flex-col'>
 
     <Navbar/>
-    <div className='bg-red- ml-4 '>
+    <div className='ml-4 '>
         <img src={logo} alt=""  className='h-80'/>
         <h1 className='mt-auto text-white text-6xl font-bold'>Guardian Angel Nursery and Primary School</h1>
-        <p className='text-6xl w-max bg-black/20 py-2 rounded px-1 font-semibold text-yellow-300 my-4'>“Learning, Caring and Sharing Together”</p>
+        <p className='text-6xl w-max bg-black/20 py-2 rounded px-1 font-semibold text-yellow-300 my-4 text-wrap hidden'>“Learning, Caring and Sharing Together”</p>
     </div>
     <div>
 
