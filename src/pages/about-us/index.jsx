@@ -34,7 +34,7 @@ const AboutUs = () => {
           </div>      
 
 
-          <div className='grid grid-cols-2 m-auto max-w-7xl gap-5 my-20'>
+          <div className='grid sm:grid-cols-2 m-auto max-w-7xl gap-5 my-20'>
             <div className='order-2 '>
               <h3 className='text-3xl font-medium text-center'>Our Mission Statement</h3>
               <p>Weare with you always to bridge the GAP, of your not managing excellently success already gained by you</p>
@@ -47,7 +47,7 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
-          <div className='grid grid-cols-2 max-w-7xl gap-5 m-auto'>
+          <div className='grid sm:grid-cols-2 max-w-7xl gap-5 m-auto'>
 
             <div>
               <h3 className='text-center text-3xl'>Our Strength</h3>

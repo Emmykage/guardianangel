@@ -36,12 +36,12 @@ const Footer = () => {
 
                 </div>
                 <div className='flex gap-5 my-4 items-center flex-col md:flex-row'>
-                <FaPhoneAlt/>       <a href="tel:++2348093164341">+2348093164341</a>
+                <FaPhoneAlt/>       <a href="tel:+2348033376983">+2348033376983</a>
 
 
                 </div>
                 <div className='flex gap-5 my-4 items-center flex-col md:flex-row'>
-                <IoMailSharp/> <a href="mailto:support@ValentPhama.com"> support@ValentPhama.com</a>
+                <IoMailSharp/> <a href="mailto:support@ValentPhama.com"> support@guardianangel.com</a>
 
                 </div>
                 
