@@ -9,7 +9,7 @@ const Navbar = () => {
     const [toggle, setToggle] = useState(false)
 
     const active = "text-primary"
-    const inActive = "text-alt"
+    const inActive = "hover:text-primary"
 
 
 
@@ -32,7 +32,7 @@ const Navbar = () => {
                 <li  className='navlink relative'> 
                     <NavLink className={({isActive})=> isActive ? active : inActive} to="/about-us">About Us </NavLink>
                     <ul className='bg-theme/60 max-w-full sm:min-w-max text-nowrap text-white top-full left-0 sm:absolute border transition-all ease-linear duration-300 border-gray-200/30 shadow pl-3 pr-20 py-4 sm:rounded-bl-xl sm:rounded-br-xl'>
-                        <li className='transition-all ease-linear duration-300'><NavLink to={""}>Welcome </NavLink> </li>
+                        <li className='transition-all text-primary ease-linear duration-300'><NavLink to={""}>Welcome </NavLink> </li>
                         <li><NavLink to={""}>Vission and Mission </NavLink> </li>                     
                 
                     </ul>
