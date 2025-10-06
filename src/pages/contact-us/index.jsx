@@ -1,7 +1,5 @@
 
 import { FaClock, FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa'
-import Header from '../../components/header/Header'
-import Navbar from '../../components/nav/Navbar'
 
 const ContactUs = () => {
   return (
