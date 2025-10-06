@@ -11,6 +11,7 @@ import { LoremIpsum } from 'lorem-ipsum'
 // import bg from '../assets/bg.png'
 import Navbar from '../components/nav/Navbar'
 import logo from '../assets/logo/logo.png'
+import SideNav from '../components/sideNav/SideNav'
 
 const Home = () => {
     const lorem = new LoremIpsum()
@@ -24,6 +25,11 @@ const Home = () => {
 
     }
   return (
+      <main className="grid sm:grid-cols-theme-layout -500 h-screen">
+        <SideNav/>
+        <div className="w-full">
+      
+
 
     <div className='px-0 bg-custom w-full bg-red-600 h-full flex justify-between flex-col'>
 
@@ -55,7 +61,7 @@ const Home = () => {
 
     </HomeContainer> */}
 
-    </div>)
+    </div></div> </main>)
 }
 
 export default Home

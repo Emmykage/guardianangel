@@ -41,7 +41,7 @@ const Footer = () => {
 
                 </div>
                 <div className='flex gap-5 my-4 items-center flex-col md:flex-row'>
-                <IoMailSharp/> <a href="mailto:support@ValentPhama.com"> support@guardianangel.com</a>
+                <IoMailSharp/> <a href="mailto:support@guardianangelschool.com"> support@guardianangel.com</a>
 
                 </div>
                 

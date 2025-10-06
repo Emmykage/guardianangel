@@ -25,7 +25,7 @@ const Nav = () => {
            
             </ul>
             </Linker>
-        <Linker href="#" className='navlink relative bg-green-400'>
+        {/* <Linker href="#" className='navlink relative bg-green-400'>
         Information
         <ul className='bg-theme text-white top-full left-0 absolute border border-gray-200 shadow pl-3 pr-10 py-4 rounded-bl-xl rounded-br-xl'>
                 <li><NavLink>Contact Us </NavLink> </li>
@@ -40,7 +40,7 @@ const Nav = () => {
             </ul>
         
         
-        </Linker>
+        </Linker> */}
         <Linker href="#" className='navlink relative bg-green-400'>News and Events   
         <ul className='bg-purple-900 text-white top-full left-0 absolute border border-gray-200 shadow pl-3 pr-10 py-4 rounded-bl-xl rounded-br-xl'>
                 <li><NavLink>School Calendar Us </NavLink> </li>

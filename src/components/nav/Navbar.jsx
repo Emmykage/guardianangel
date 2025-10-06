@@ -1,101 +1,140 @@
-import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
-
-import './navbar.scss'
-import { AiOutlineMenuFold } from 'react-icons/ai'
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
+  const [toggle, setToggle] = useState(false);
 
-    const [toggle, setToggle] = useState(false)
+  const navLinks = [
+    {
+      label: "About Us",
+      path: "/about-us",
+      submenu: [
+        { label: "Welcome", path: "/about-us/welcome" },
+        { label: "Vision & Mission", path: "/about-us/vision-mission" },
+      ],
+    },
+    {
+      label: "Information",
+      path: "/information",
+      submenu: [
+        { label: "Admission", path: "/admission" },
+        { label: "Curriculum", path: "/curriculum" },
+      ],
+    },
+    {
+      label: "News & Events",
+      path: "/news-events",
+      submenu: [
+        { label: "School Calendar", path: "/calendar" },
+        { label: "Term Dates", path: "/terms-and-dates" },
+        { label: "Curriculum", path: "/curriculum" },
+        { label: "Tuition Fees", path: "/tuition-fees" },
+      ],
+    },
+    { label: "Contact Us", path: "/contact-us" },
+  ];
 
-    const active = "text-primary"
-    const inActive = "hover:text-primary"
+  const active = "text-primary font-semibold";
+  const inActive = "hover:text-primary transition-colors";
 
-
-
-
-    // const handleLoginClick = ()=> {
-    //     navigate('/choose-user')
-
-    // }
   return (
-    <header className='navigation top py-5'>
+    <header className=" bg-gradient-to-b from-theme via-theme/80 to-theme/40 text-white shadow-md fixed top-0 w-full z-50">
+      <nav className="flex w-full justify-between items-center px-6 md:px-12 py-4">
 
-    <nav className='bg-re'>
-        <span onClick={() => setToggle(prev => !prev)} className='h-10 flex sm:hidden justify-center items-center w-10 '>
-            <AiOutlineMenuFold className='text-white font-bold text-3xl'/>
+        <NavLink to={"/"} className="text-2xl font-bold tracking-wide">
+        <img src={"logo.png"} alt="logo" className="h-12"/></NavLink>
 
-        </span>
-        <div className={`gap-4 bg-gray-00/20 sm:px-12 md:px-20 py-10 rounded`}>
-            <ul className={`${toggle ? "right-0" : "right-full"} py-10 sm:py-1 bg-theme/90 sm:bg-transparent justify-end  transition-all ease-linear duration-300 w-full sm:flex px-6 fixed sm:static min-h-96 sm:min-h-10  sm:h-max  block  text-white gap-6 text-lg font-medium link`}>
+        {/* Desktop Nav */}
+        <ul className="hidden  sm:flex flex-1 items-center justify-center gap-8 text-lg">
+          {navLinks.map((link, i) => (
+            <li key={i} className="relative group">
+              <NavLink
+                to={link.path}
+                className={({ isActive }) =>
+                  isActive ? active : inActive
+                }
+              >
+                {link.label}
+              </NavLink>
 
-                <li  className='navlink relative'> 
-                    <NavLink className={({isActive})=> isActive ? active : inActive} to="/about-us">About Us </NavLink>
-                    <ul className='bg-theme/60 max-w-full sm:min-w-max text-nowrap text-white top-full left-0 sm:absolute border transition-all ease-linear duration-300 border-gray-200/30 shadow pl-3 pr-20 py-4 sm:rounded-bl-xl sm:rounded-br-xl'>
-                        <li className='transition-all text-primary ease-linear duration-300'><NavLink to={""}>Welcome </NavLink> </li>
-                        <li><NavLink to={""}>Vission and Mission </NavLink> </li>                     
-                
-                    </ul>
-                </li>
-                <li className='navlink relative transition-all ease-linear duration-300 '>
-                <NavLink  className={({isActive})=> isActive ? active : inActive} to="/information">Information </NavLink>
+              {/* Dropdown */}
+              {link.submenu && (
+                <ul className="absolute left-0 top-full mt-2 bg-white text-gray-700 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transform transition-all duration-300 min-w-[200px]">
+                  {link.submenu.map((sub, j) => (
+                    <li key={j}>
+                      <NavLink
+                        to={sub.path}
+                        className="block px-4 py-2 hover:bg-gray-100 transition"
+                      >
+                        {sub.label}
+                      </NavLink>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ul>
 
-                
-                <ul className='bg-theme/60 max-w-full sm:w-max sm:min-w-max text-white top-full left-0 sm:absolute border transition-all ease-linear duration-300 border-gray-200/30 shadow pl-3 pr-20 py-4 sm:rounded-bl-xl sm:rounded-br-xl'>
-                        <li><NavLink>Admission </NavLink> </li>
-                        <li><NavLink>Curriculum </NavLink> </li>
-                    
-                
-                    </ul>
-                
-                
-                </li>
-        <li  className='navlink relative'>
-        <NavLink  className={({isActive})=> isActive ? active : inActive} to="/news-events">     News and Events    </NavLink>
+        {/* Mobile Toggle */}
+        <button
+          className="sm:hidden text-3xl"
+          onClick={() => setToggle(!toggle)}
+        >
+          {toggle ? <AiOutlineClose /> : <AiOutlineMenu />}
+        </button>
+      </nav>
 
-        <ul className='bg-theme/60 max-w-full sm:w-max sm:min-w-max text-white top-full left-0 sm:absolute border transition-all ease-linear duration-300 border-gray-200/30 shadow pl-3 pr-20 py-4 sm:rounded-bl-xl sm:rounded-br-xl'>
-                <li><NavLink>School Calendar Us </NavLink> </li>
-                <li><NavLink>Term Dates </NavLink> </li>
-                <li><NavLink>Curriculum </NavLink> </li>
-                <li><NavLink>Policies and Documents  </NavLink></li>
-                <li><NavLink>Data Protection               </NavLink></li>
-                <li><NavLink>Attendance  </NavLink></li>
-                <li><NavLink>Feedback and Comliaints  </NavLink>
-                 </li>
-           
-            </ul>     
-        </li>
-        <li   className='navlink relative'>
-            <NavLink className={({isActive})=> isActive ? active : inActive} to="/contact-us">Contact Us </NavLink> 
-            {/* <ul className='bg-theme/60 max-w-72 w-max text-white top-full left-0 sm:absolute border transition-all ease-linear duration-300 border-gray-200/30 shadow pl-3 pr-20 py-4 sm:rounded-bl-xl sm:rounded-br-xl'>
-                    <li><NavLink>Parent Information Hub
-                    </NavLink> </li>
-                    <li><NavLink>Forms and Application Packs
-                    </NavLink> </li>
-                    <li><NavLink>Uniform Ordering
-                    </NavLink> </li>
-                    <li><NavLink>Health Issues
-                    </NavLink></li>
-                    <li><NavLink>Parent Teacher Association (PTA)
-                    </NavLink></li>
-                    <li><NavLink>School Clubs  </NavLink></li>
-                
-            
-                </ul>     */}
-         </li>
-       
+      {/* Mobile Menu */}
 
-            </ul>
+      <div
+      className={`bg-theme/40 w-full h-full inset-0 z-40 fixed top-0 left-0 sm:hidden ${toggle ? "opacity-100 visible" : "opacity-0 invisible"}`}
+        onClick={()=> setToggle(false)}
+>
+          </div>
 
 
+      <div
+        className={`fixed top-0 right-0 w-3/4 h-full z-50 bg-theme/95 backdrop-blur-lg shadow-lg transition-transform duration-300 ${
+          toggle ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex flex-col gap-6 p-6 text-lg font-medium">
+          {navLinks.map((link, i) => (
+            <div key={i}>
+              <NavLink
+                to={link.path}
+                onClick={() => setToggle(false)}
+                className={({ isActive }) =>
+                  isActive ? active : inActive
+                }
+              >
+                {link.label}
+              </NavLink>
+
+              {/* Submenu */}
+              {link.submenu && (
+                <div className="ml-4 mt-2 flex flex-col gap-2 text-gray-300">
+                  {link.submenu.map((sub, j) => (
+                    <NavLink
+                      key={j}
+                      to={sub.path}
+                      onClick={() => setToggle(false)}
+                      className="hover:text-primary transition"
+                    >
+                      {sub.label}
+                    </NavLink>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
         </div>
-     
-        
-    </nav>
+            </div>
 
     </header>
+  );
+};
 
-  )
-}
-
-export default Navbar
+export default Navbar;

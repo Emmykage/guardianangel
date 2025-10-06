@@ -46,8 +46,13 @@ import Home from './pages'
 import MainLayout from './layouts/MainLayout'
 import AboutUs from './pages/about-us'
 import ContactUs from './pages/contact-us'
-import Information from './pages/information'
 import NewsEvent from './pages/news-event'
+import Curriculum from './pages/curriculum/Curriculum'
+import Admission from './pages/admission/Admission'
+import TermDates from './pages/terms-and-date/TermsAndDate'
+import TuitionFees from './pages/tuitionFees/TuitionFees'
+import SchoolCalendar from './pages/calendar/Calendar'
+import InformationPage from './pages/information'
 
 function App() {
 
@@ -60,17 +65,27 @@ function App() {
 
       <Route path='/choose-user' element={<ChooseUser />}/>
 
-      <Route path='/' element={<MainLayout><Home/> </MainLayout> }/>
+      <Route path='/' element={<><Home/> </> }/>
+      <Route element={<MainLayout> </MainLayout> }>
+
+
+      <Route path='/about-us' element={<><AboutUs /></> }/>
+      <Route path='/news-events' element={<><NewsEvent /></> }/>
+      <Route path='/information' element={<><InformationPage /></> }/>
+      <Route path='/contact-us' element={<><ContactUs /></> }/>
+      <Route path='/curriculum' element={<><Curriculum /></> }/>
+      <Route path='/admission' element={<><Admission /></> }/>
+      <Route path='/calendar' element={<><SchoolCalendar /></> }/>
+      <Route path='/terms-and-dates' element={<><TermDates /></> }/>
+      <Route path='/tuition-fees' element={<><TuitionFees /></> }/>
+
+
+      </Route>
 
       {/* <Route path='home' element={<><Home /></> }/> */}
 
       {/* <Route path='/prospectus' element={<><Home /></> }/> */}
 
-
-      <Route path='/about-us' element={<><AboutUs /></> }/>
-      <Route path='/news-events' element={<><NewsEvent /></> }/>
-      <Route path='/information' element={<><Information /></> }/>
-      <Route path='/contact-us' element={<><ContactUs /></> }/>
 
 
       
