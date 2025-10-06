@@ -96,7 +96,7 @@ const Navbar = () => {
 
 
       <div
-        className={`fixed top-0 right-0 w-3/4 h-full z-50 bg-theme/95 backdrop-blur-lg shadow-lg transition-transform duration-300 ${
+        className={`fixed top-0 right-0 w-3/4 h-full z-50 pt-10 bg-theme/95 backdrop-blur-lg shadow-lg transition-transform duration-300 ${
           toggle ? "translate-x-0" : "translate-x-full"
         }`}
       >
