@@ -1,8 +1,10 @@
 import React from 'react'
+import Navbar from '../../components/nav/Navbar'
 
 const SchoolCalendar = () => {
   return (
 <main className="bg-gray-50 min-h-screen">
+  <Navbar/>
       {/* Banner */}
       <section className="relative bg-blue-900 text-white">
         <img

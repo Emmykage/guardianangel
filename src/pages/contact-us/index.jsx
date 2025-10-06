@@ -1,9 +1,11 @@
 
 import { FaClock, FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa'
+import Navbar from '../../components/nav/Navbar'
 
 const ContactUs = () => {
   return (
    <main className="min-h-screen bg-gray-50">
+    <Navbar/>
       {/* Banner */}
       <section className="relative h-72 flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center">
         <div className="absolute inset-0 bg-black/40" />

@@ -53,6 +53,8 @@ import TermDates from './pages/terms-and-date/TermsAndDate'
 import TuitionFees from './pages/tuitionFees/TuitionFees'
 import SchoolCalendar from './pages/calendar/Calendar'
 import InformationPage from './pages/information'
+import MissionVisionPage from './pages/missin-vission/MissionVission'
+import WelcomeMessage from './pages/welcome/Welcome'
 
 function App() {
 
@@ -78,6 +80,8 @@ function App() {
       <Route path='/calendar' element={<><SchoolCalendar /></> }/>
       <Route path='/terms-and-dates' element={<><TermDates /></> }/>
       <Route path='/tuition-fees' element={<><TuitionFees /></> }/>
+      <Route path='//about-us/vision-mission' element={<><MissionVisionPage /></> }/>
+      <Route path='/about-us/welcome' element={<><WelcomeMessage /></> }/>
 
 
       </Route>
