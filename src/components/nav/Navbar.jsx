@@ -43,7 +43,7 @@ const Navbar = () => {
       <nav className="flex w-full justify-between items-center px-6 md:px-12 py-4">
 
         <NavLink to={"/"} className="text-2xl font-bold tracking-wide">
-        <img src={"logo.png"} alt="logo" className="h-12"/></NavLink>
+        <img src={"/logo.png"} alt="logo" className="h-12"/></NavLink>
 
         {/* Desktop Nav */}
         <ul className="hidden  sm:flex flex-1 items-center justify-center gap-8 text-lg">
