@@ -1,247 +1,296 @@
-
-// import Header from '../../components/header/Header'
-import aboutImg from "../../assets/images/guardian-about.jpg"
-// import Footer from '../../components/footer/Footer'
-// const AboutUs = () => {
-//   return (
-// <main>
-//   <Header />
-
-//   <section className="px-4 py-20 bg-gray-50">
-//     <div className="max-w-7xl mx-auto">
-//       {/* Page Title */}
-//       <div className="text-center mb-16">
-//         <h2 className="text-5xl font-extrabold tracking-tight text-gray-900">
-//           About Us
-//         </h2>
-//         <p className="mt-6 text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-//           Over 12 years of impactful service built on God’s grace, dedication,
-//           hard work, and rewarding partnerships. Our future is evergreen,
-//           prosperous, and full of breakthroughs.
-//         </p>
-//       </div>
-
-//       {/* About Section */}
-//       <div className="grid gap-12 sm:grid-cols-2 items-center mb-20">
-//         <div className="space-y-5">
-//           <p className="text-gray-700 text-lg leading-relaxed">
-//             We are passionate, humble, and constantly training to remain
-//             resourceful in achieving our periodic targets through innovative
-//             discipleship leadership.
-//           </p>
-//           <p className="text-gray-700 text-lg leading-relaxed">
-//             Our commitment is to excellence, service, and growth, built on
-//             values that last generations.
-//           </p>
-//         </div>
-//         <div className="rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform">
-//           <img
-//             src={aboutImg}
-//             alt="About our school"
-//             className="w-full h-[450px] object-cover"
-//           />
-//         </div>
-//       </div>
-
-//       {/* Section Reusable Component */}
-//       {[
-//         {
-//           title: "Our Mission",
-//           text: "We walk with you to bridge the gap in managing success already achieved—helping you maximize and sustain excellence.",
-//           img: aboutImg,
-//           reverse: true,
-//         },
-//         {
-//           title: "Our Strength",
-//           text: "Our strength is rooted in God Almighty, reflected through our passionate and excellent service delivery.",
-//           img: aboutImg,
-//         },
-//         {
-//           title: "Our Core Values",
-//           text: "Honesty, discipline, and excellence in resource management—while delivering consistent quality and helping you sustain success.",
-//           img: aboutImg,
-//           reverse: true,
-//         },
-//         {
-//           title: "Our Vision",
-//           text: "To passionately guide, train, and empower people in achieving sustainable success through excellence and godly principles.",
-//           img: aboutImg,
-//         },
-//       ].map(({ title, text, img, reverse }, idx) => (
-//         <div
-//           key={idx}
-//           className={`grid gap-12 sm:grid-cols-2 items-center mb-20 ${
-//             reverse ? "sm:flex-row-reverse" : ""
-//           }`}
-//         >
-//           <div className="space-y-4 text-center sm:text-left">
-//             <h3 className="text-3xl font-bold text-gray-900 relative inline-block">
-//               {title}
-//               <span className="block h-1 w-16 bg-blue-600 mt-2 mx-auto sm:mx-0 rounded"></span>
-//             </h3>
-//             <p className="text-gray-700 text-lg leading-relaxed">{text}</p>
-//           </div>
-//           <div className="rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform">
-//             <img
-//               src={img}
-//               alt={`${title} illustration`}
-//               className="w-full h-[450px] object-cover"
-//             />
-//           </div>
-//         </div>
-//       ))}
-//     </div>
-//   </section>
-
-//   <Footer />
-// </main>
-
-
-//   )
-// }
-
-// export default AboutUs
-
-
-import React from "react";
+import aboutImg from "../../assets/images/guardian-about.jpg";
 import Navbar from "../../components/nav/Navbar";
+
+const coreValues = [
+  {
+    title: "Honesty",
+    desc: "We uphold integrity in everything we do, building trust with every family we serve.",
+    icon: "⚖️",
+  },
+  {
+    title: "Discipline",
+    desc: "We believe discipline is the bedrock of excellence and lifelong achievement.",
+    icon: "🎯",
+  },
+  {
+    title: "Service",
+    desc: "We serve our community with passion, humility, and unwavering dedication.",
+    icon: "🤝",
+  },
+  {
+    title: "Innovation",
+    desc: "We foster creativity and forward-thinking to prepare children for tomorrow.",
+    icon: "💡",
+  },
+];
 
 const AboutUsPage = () => {
   return (
-    <main className="bg-gray-50 text-gray-800">
-      <Navbar/>
-      {/* Hero / Banner */}
-      <section className="relative bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            About Guardian Angel Nursery & Primary School
+    <main style={{ background: "#f9f6f0", fontFamily: "system-ui, sans-serif", color: "#1a2e4a" }}>
+      <Navbar />
+
+      {/* ── Hero Banner ── */}
+      <section
+        className="relative overflow-hidden pt-24"
+        style={{
+          background: "linear-gradient(135deg, #1a2e4a 0%, #2d4a73 60%, #1a3a5c 100%)",
+          minHeight: "360px",
+        }}
+      >
+        {/* Decorative blobs */}
+        <div
+          className="absolute -top-20 -right-20 w-80 h-80 rounded-full pointer-events-none"
+          style={{ background: "radial-gradient(circle, rgba(240,192,64,0.12), transparent 70%)" }}
+        />
+        <div
+          className="absolute bottom-0 left-1/4 w-96 h-28 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse, rgba(255,255,255,0.04), transparent)" }}
+        />
+
+        <div className="relative max-w-6xl mx-auto px-6 lg:px-12 py-20 text-center">
+          {/* eyebrow */}
+          <p
+            className="text-xs font-bold tracking-widest uppercase mb-3"
+            style={{ color: "#f0c040" }}
+          >
+            Guardian Angel Nursery & Primary School
+          </p>
+          <h1
+            className="text-4xl md:text-5xl font-bold text-white mb-5"
+            style={{ fontFamily: "'Georgia', serif", lineHeight: 1.15, letterSpacing: "-0.02em" }}
+          >
+            About Us
           </h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto text-gray-100">
-            Nurturing young minds through a perfect blend of the Nigerian and
-            Montessori curricula — fostering excellence, independence, and
-            holistic child development.
+          <p className="text-blue-200 text-lg max-w-2xl mx-auto leading-relaxed">
+            Nurturing young minds through a perfect blend of the Nigerian and Montessori
+            curricula — fostering excellence, independence, and holistic child development.
           </p>
         </div>
+
+        {/* Bottom wave */}
+        <svg
+          className="w-full block"
+          viewBox="0 0 1440 60"
+          preserveAspectRatio="none"
+          style={{ height: 48, marginBottom: -2 }}
+        >
+          <path d="M0,0 C480,60 960,60 1440,0 L1440,60 L0,60 Z" fill="#f9f6f0" />
+        </svg>
       </section>
 
-      {/* Welcome */}
-      <section className="max-w-6xl mx-auto px-6 lg:px-12 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-indigo-700 mb-4">
-            Welcome to Guardian Angel
-          </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            With over a decade of experience in quality education, Guardian Angel
-            Nursery & Primary School stands as a beacon of learning in Kubwa,
-            Abuja. We are passionate about shaping the future by combining
-            strong academics with creativity, moral discipline, and a nurturing
-            environment where every child can thrive.
-
-            
-          </p>
+      {/* ── Welcome / Our Story ── */}
+      <section className="max-w-6xl mx-auto px-6 lg:px-12 py-20">
+        {/* Section label */}
+        <div className="flex items-center gap-3 mb-10">
+          <span className="h-0.5 w-8 rounded-full" style={{ background: "#f0c040" }} />
+          <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "#f0c040" }}>
+            Who We Are
+          </span>
         </div>
 
-        <div className="grid gap-10 sm:grid-cols-2">
-          <img
-            src={aboutImg}
-            alt="School children learning"
-            className="rounded-2xl shadow-lg"
-          />
-          <div className="flex flex-col justify-center">
-            <h3 className="text-2xl font-semibold text-indigo-600 mb-4">
+        <div className="grid gap-14 md:grid-cols-2 items-center">
+          {/* Image */}
+          <div className="relative">
+            <div
+              className="absolute -top-4 -left-4 w-full h-full rounded-2xl pointer-events-none"
+              style={{ border: "3px solid #f0c040", opacity: 0.4 }}
+            />
+            <img
+              src={aboutImg}
+              alt="School children learning"
+              className="relative rounded-2xl w-full object-cover shadow-xl"
+              style={{ maxHeight: "420px" }}
+            />
+          </div>
+
+          {/* Text */}
+          <div>
+            <h2
+              className="text-3xl font-bold mb-4"
+              style={{ fontFamily: "'Georgia', serif", color: "#1a2e4a", lineHeight: 1.2 }}
+            >
+              Welcome to Guardian Angel
+            </h2>
+            <div className="h-1 w-12 rounded-full mb-6" style={{ background: "#f0c040" }} />
+            <p className="text-gray-600 leading-relaxed mb-5">
+              With over a decade of experience in quality education, Guardian Angel stands as
+              a beacon of learning in Kubwa, Abuja. We combine strong academics with
+              creativity, moral discipline, and a nurturing environment where every child
+              can thrive.
+            </p>
+            <h3 className="text-lg font-semibold mb-2" style={{ color: "#1a2e4a" }}>
               Our Story
             </h3>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Guardian Angel was founded to provide accessible, high-quality
-              education to families in Abuja. Rooted in values of honesty,
-              discipline, and service, we are committed to developing young
-              leaders with strong academic foundations and lifelong curiosity.
+            <p className="text-gray-600 leading-relaxed mb-4">
+              Founded to provide accessible, high-quality education to families in Abuja,
+              Guardian Angel is rooted in values of honesty, discipline, and service.
+              We are committed to developing young leaders with strong academic foundations
+              and a lifelong love of learning.
             </p>
-            <p className="text-gray-700 leading-relaxed">
-              Our dedicated teachers and caregivers bring warmth and
-              professionalism into the classroom, ensuring that every child
-              feels loved, supported, and encouraged to grow.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="bg-white py-16">
-        <div className="max-w-6xl mx-auto px-6 lg:px-12 grid gap-12 md:grid-cols-2">
-          <div className="p-8 rounded-xl shadow-md bg-gray-50">
-            <h3 className="text-2xl font-semibold text-indigo-700 mb-4">
-              Our Mission
-            </h3>
-            <p className="text-gray-700 leading-relaxed">
-              To nurture every child academically, morally, and socially by
-              providing a safe, innovative, and inclusive environment that
-              bridges the gap between structured learning and creative discovery.
-            </p>
-          </div>
-          <div className="p-8 rounded-xl shadow-md bg-gray-50">
-            <h3 className="text-2xl font-semibold text-indigo-700 mb-4">
-              Our Vision
-            </h3>
-            <p className="text-gray-700 leading-relaxed">
-              To be a leading school in Nigeria that develops responsible,
-              confident, and resourceful young learners who are prepared to
-              succeed in life and make meaningful contributions to society.
+            <p className="text-gray-600 leading-relaxed">
+              Our dedicated teachers and caregivers bring warmth and professionalism into
+              every classroom — ensuring each child feels loved, supported, and encouraged
+              to grow.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Core Values */}
-      <section className="py-16 bg-gray-100">
-        <div className="max-w-6xl mx-auto px-6 lg:px-12 text-center">
-          <h2 className="text-3xl font-bold text-indigo-700 mb-8">
-            Our Core Values
-          </h2>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      {/* ── Mission & Vision ── */}
+      <section className="py-20" style={{ background: "white" }}>
+        <div className="max-w-6xl mx-auto px-6 lg:px-12">
+          <div className="flex items-center gap-3 mb-10">
+            <span className="h-0.5 w-8 rounded-full" style={{ background: "#f0c040" }} />
+            <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "#f0c040" }}>
+              Our Purpose
+            </span>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2">
             {[
-              { title: "Honesty", desc: "We uphold integrity in all we do." },
               {
-                title: "Discipline",
-                desc: "We believe discipline is key to achieving excellence.",
+                label: "Our Mission",
+                text: "To nurture every child academically, morally, and socially by providing a safe, innovative, and inclusive environment that bridges the gap between structured learning and creative discovery.",
+                icon: "🎓",
               },
               {
-                title: "Service",
-                desc: "We serve with passion, humility, and dedication.",
+                label: "Our Vision",
+                text: "To be a leading school in Nigeria that develops responsible, confident, and resourceful young learners who are prepared to succeed in life and make meaningful contributions to society.",
+                icon: "🔭",
               },
-              {
-                title: "Innovation",
-                desc: "We encourage creativity and forward-thinking in learning.",
-              },
-            ].map((val, i) => (
+            ].map((item, i) => (
               <div
                 key={i}
-                className="p-6 bg-white rounded-lg shadow hover:shadow-lg transition"
+                className="rounded-2xl p-8 relative overflow-hidden"
+                style={{
+                  background: "#f9f6f0",
+                  border: "1px solid #e8e2d8",
+                }}
               >
-                <h4 className="text-xl font-semibold text-indigo-600 mb-2">
-                  {val.title}
-                </h4>
-                <p className="text-gray-600">{val.desc}</p>
+                {/* Gold top bar */}
+                <div
+                  className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl"
+                  style={{ background: "linear-gradient(90deg, #f0c040, #e8a820)" }}
+                />
+                <div className="text-4xl mb-4">{item.icon}</div>
+                <h3
+                  className="text-xl font-bold mb-3"
+                  style={{ fontFamily: "'Georgia', serif", color: "#1a2e4a" }}
+                >
+                  {item.label}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">{item.text}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Address & Contact */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-indigo-700 mb-6">
-            Visit Us
+      {/* ── Core Values ── */}
+      <section className="py-20" style={{ background: "#f9f6f0" }}>
+        <div className="max-w-6xl mx-auto px-6 lg:px-12">
+          <div className="flex items-center gap-3 mb-10">
+            <span className="h-0.5 w-8 rounded-full" style={{ background: "#f0c040" }} />
+            <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "#f0c040" }}>
+              What We Stand For
+            </span>
+          </div>
+          <h2
+            className="text-3xl font-bold mb-10"
+            style={{ fontFamily: "'Georgia', serif", color: "#1a2e4a" }}
+          >
+            Our Core Values
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed mb-4">
-            Address: Plot C144 Church Street at Imeko Close (B&B Junction), Off
-            Sultan Dasuki Road, Phase 2, Site 2, Kubwa, Abuja.
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {coreValues.map((val, i) => (
+              <div
+                key={i}
+                className="group rounded-2xl p-6 cursor-default transition-all duration-200"
+                style={{
+                  background: "white",
+                  border: "1px solid #e8e2d8",
+                }}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.boxShadow = "0 8px 32px rgba(26,46,74,0.12)")
+                }
+                onMouseOut={(e) => (e.currentTarget.style.boxShadow = "none")}
+              >
+                <div className="text-3xl mb-4">{val.icon}</div>
+                <div className="h-0.5 w-8 rounded-full mb-4" style={{ background: "#f0c040" }} />
+                <h4
+                  className="text-lg font-bold mb-2"
+                  style={{ color: "#1a2e4a", fontFamily: "'Georgia', serif" }}
+                >
+                  {val.title}
+                </h4>
+                <p className="text-gray-500 text-sm leading-relaxed">{val.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Visit Us ── */}
+      <section
+        className="py-20 relative overflow-hidden"
+        style={{
+          background: "linear-gradient(135deg, #1a2e4a 0%, #2d4a73 100%)",
+        }}
+      >
+        {/* Decorative */}
+        <div
+          className="absolute -bottom-20 -right-20 w-72 h-72 rounded-full pointer-events-none"
+          style={{ background: "radial-gradient(circle, rgba(240,192,64,0.10), transparent 70%)" }}
+        />
+
+        <div className="relative max-w-3xl mx-auto px-6 text-center">
+          <p
+            className="text-xs font-bold uppercase tracking-widest mb-3"
+            style={{ color: "#f0c040" }}
+          >
+            Find Us
           </p>
-          <p className="text-lg text-gray-600">
-            Contact: Call or email our admissions office to learn more about our
-            programs and how to enroll your child.
+          <h2
+            className="text-3xl font-bold text-white mb-6"
+            style={{ fontFamily: "'Georgia', serif" }}
+          >
+            Visit Our School
+          </h2>
+          <div
+            className="rounded-2xl p-8 mb-8"
+            style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.12)" }}
+          >
+            <p className="text-blue-100 leading-relaxed mb-2">
+              📍 Plot C144 Church Street at Imeko Close (B&B Junction),
+            </p>
+            <p className="text-blue-100 leading-relaxed">
+              Off Sultan Dasuki Road, Phase 2, Site 2, Kubwa, Abuja.
+            </p>
+          </div>
+          <p className="text-blue-200 mb-8 leading-relaxed">
+            Contact our admissions office to learn more about our programs and how to enroll your child.
           </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href="/contact-us"
+              className="px-7 py-3 rounded-full font-bold text-sm transition-all duration-200"
+              style={{ background: "#f0c040", color: "#1a2e4a" }}
+              onMouseOver={(e) => (e.currentTarget.style.background = "#e8a820")}
+              onMouseOut={(e) => (e.currentTarget.style.background = "#f0c040")}
+            >
+              Contact Us
+            </a>
+            <a
+              href="/admission"
+              className="px-7 py-3 rounded-full font-bold text-sm border-2 transition-all duration-200"
+              style={{ borderColor: "rgba(255,255,255,0.4)", color: "white" }}
+              onMouseOver={(e) => (e.currentTarget.style.borderColor = "white")}
+              onMouseOut={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.4)")}
+            >
+              Apply Now →
+            </a>
+          </div>
         </div>
       </section>
     </main>
