@@ -56,9 +56,9 @@ const Navbar = () => {
       <header
         className="fixed top-0 w-full z-50 transition-all duration-300"
         style={{
-          background: scrolled
-            ? "rgba(26, 46, 74, 0.97)"
-            : "linear-gradient(135deg, #1a2e4a 0%, #2d4a73 60%, #1a3a5c 100%)",
+          background: scrolled ? 
+            "rgba(26, 46, 74, 0.97)"
+           : "linear-gradient(135deg, white 0%, #2d4a73 60%, #1a3a5c 100%)",
           backdropFilter: scrolled ? "blur(12px)" : "none",
           boxShadow: scrolled ? "0 4px 24px rgba(26,46,74,0.25)" : "none",
           fontFamily: "system-ui, sans-serif",
