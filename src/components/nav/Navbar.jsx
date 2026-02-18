@@ -68,7 +68,7 @@ const Navbar = () => {
             <img
               src="/logo.png"
               alt="logo"
-              className="h-11 transition-transform duration-200 group-hover:scale-105"
+              className="h-20 transition-transform duration-200 group-hover:scale-105"
             />
           </NavLink>
 

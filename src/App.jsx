@@ -67,8 +67,9 @@ function App() {
 
       <Route path='/choose-user' element={<ChooseUser />}/>
 
-      <Route path='/' element={<><Home/> </> }/>
       <Route element={<MainLayout> </MainLayout> }>
+            <Route path='/' element={<><Home/> </> }/>
+
 
 
       <Route path='/about-us' element={<><AboutUs /></> }/>
