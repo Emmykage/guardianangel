@@ -39,6 +39,14 @@ const Navbar = () => {
         { label: "Curriculum", path: "/curriculum" },
         { label: "Tuition Fees", path: "/tuition-fees" },
       ],
+
+
+    },
+
+     {
+      label: "Portal",
+      path: "/portal",
+     
     },
     { label: "Contact Us", path: "/contact-us" },
   ];

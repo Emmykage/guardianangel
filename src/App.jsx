@@ -55,6 +55,8 @@ import SchoolCalendar from './pages/calendar/Calendar'
 import InformationPage from './pages/information'
 import MissionVisionPage from './pages/missin-vission/MissionVission'
 import WelcomeMessage from './pages/welcome/Welcome'
+import PortalLogin from './pages/portal/PortalLogin'
+// import PortalLogin from '../../../../../Downloads/PortalLogin'
 
 function App() {
 
@@ -69,6 +71,7 @@ function App() {
 
       <Route element={<MainLayout> </MainLayout> }>
             <Route path='/' element={<><Home/> </> }/>
+            <Route path='/portal' element={<><PortalLogin/> </> }/>
 
 
 
