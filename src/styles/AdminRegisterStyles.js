@@ -1,11 +1,16 @@
 // AdminRegisterStyles.js
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const AdminRegisterContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(45deg, #FF69B4, #FFA07A, #90EE90); /* Gradient background */
+  background: linear-gradient(
+    45deg,
+    #ff69b4,
+    #ffa07a,
+    #90ee90
+  ); /* Gradient background */
   height: 100vh; /* Full height of the viewport */
 `;
 
@@ -36,7 +41,7 @@ export const SubmitButton = styled.button`
   margin-top: 20px;
   border: none;
   border-radius: 8px;
-  background-color: #FF4500;
+  background-color: #ff4500;
   color: white;
   font-size: 18px;
   text-align: center;
@@ -44,9 +49,9 @@ export const SubmitButton = styled.button`
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #FF6347;
+    background-color: #ff6347;
   }
-  
+
   @media screen and (max-width: 768px) {
     font-size: 16px;
   }

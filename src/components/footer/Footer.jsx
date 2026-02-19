@@ -30,30 +30,37 @@ const Footer = () => {
   return (
     <footer
       style={{
-        background: "linear-gradient(160deg, #0f1e33 0%, #1a2e4a 60%, #162840 100%)",
+        background:
+          "linear-gradient(160deg, #0f1e33 0%, #1a2e4a 60%, #162840 100%)",
         fontFamily: "system-ui, sans-serif",
       }}
     >
       {/* Gold top accent */}
       <div
         className="w-full h-1"
-        style={{ background: "linear-gradient(90deg, #f0c040, #e8a820, #f0c040)" }}
+        style={{
+          background: "linear-gradient(90deg, #f0c040, #e8a820, #f0c040)",
+        }}
       />
 
       <div className="max-w-6xl mx-auto px-6 lg:px-12 pt-16 pb-12">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
-
           {/* ── School Info ── */}
           <div className="lg:col-span-1">
-            <NavLink to="/" className="flex justify-center sm:justify-start mb-5">
+            <NavLink
+              to="/"
+              className="flex justify-center sm:justify-start mb-5"
+            >
               <img
                 src={logo}
                 alt="Guardian Angel School Logo"
                 className="w-36 transition-opacity duration-200 hover:opacity-80"
               />
             </NavLink>
-            <p className="text-sm leading-relaxed text-center sm:text-left"
-              style={{ color: "rgba(191,210,230,0.8)" }}>
+            <p
+              className="text-sm leading-relaxed text-center sm:text-left"
+              style={{ color: "rgba(191,210,230,0.8)" }}
+            >
               Guardian Angel Nursery & Primary School provides a nurturing
               environment where children thrive academically, socially, and
               spiritually — through a unique blend of the Nigerian curriculum
@@ -68,8 +75,11 @@ const Footer = () => {
                 border: "1px solid rgba(240,192,64,0.2)",
               }}
             >
-              <p className="text-xs italic font-medium" style={{ color: "#f0c040" }}>
-                ✦ "Learning, Caring and Sharing Together"
+              <p
+                className="text-xs italic font-medium"
+                style={{ color: "#f0c040" }}
+              >
+                ✦ Learning, Caring and Sharing Together
               </p>
             </div>
           </div>
@@ -79,7 +89,10 @@ const Footer = () => {
             <h3 className="mb-1 font-bold text-white text-sm uppercase tracking-widest">
               Quick Links
             </h3>
-            <div className="h-0.5 w-8 rounded-full mb-5" style={{ background: "#f0c040" }} />
+            <div
+              className="h-0.5 w-8 rounded-full mb-5"
+              style={{ background: "#f0c040" }}
+            />
             <ul className="space-y-2.5">
               {quickLinks.map((link, i) => (
                 <li key={i}>
@@ -106,14 +119,20 @@ const Footer = () => {
             <h3 className="mb-1 font-bold text-white text-sm uppercase tracking-widest">
               Contact Us
             </h3>
-            <div className="h-0.5 w-8 rounded-full mb-5" style={{ background: "#f0c040" }} />
+            <div
+              className="h-0.5 w-8 rounded-full mb-5"
+              style={{ background: "#f0c040" }}
+            />
 
             <div className="space-y-4">
               {/* Address */}
               <div className="flex items-start gap-3">
                 <div
                   className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
-                  style={{ background: "rgba(240,192,64,0.12)", color: "#f0c040" }}
+                  style={{
+                    background: "rgba(240,192,64,0.12)",
+                    color: "#f0c040",
+                  }}
                 >
                   <FaHouseChimney className="text-xs" />
                 </div>
@@ -121,8 +140,8 @@ const Footer = () => {
                   className="not-italic text-xs leading-relaxed"
                   style={{ color: "rgba(191,210,230,0.8)" }}
                 >
-                  Plot C144 Church Street at Imeko Close (B&B Junction),
-                  Off Sultan Dasuki Road, Phase 2, Site 2, Kubwa, Abuja.
+                  Plot C144 Church Street at Imeko Close (B&B Junction), Off
+                  Sultan Dasuki Road, Phase 2, Site 2, Kubwa, Abuja.
                 </address>
               </div>
 
@@ -130,16 +149,19 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <div
                   className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0"
-                  style={{ background: "rgba(240,192,64,0.12)", color: "#f0c040" }}
+                  style={{
+                    background: "rgba(240,192,64,0.12)",
+                    color: "#f0c040",
+                  }}
                 >
                   <FaPhoneAlt className="text-xs" />
                 </div>
                 <a
-                  href="tel:+2348000000000"
+                  href="tel:+2348033376983"
                   className="text-xs transition-colors duration-150 hover:text-white"
                   style={{ color: "rgba(191,210,230,0.8)" }}
                 >
-                  +234 800 000 0000
+                  +234 803 337 6983
                 </a>
               </div>
 
@@ -147,7 +169,10 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <div
                   className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0"
-                  style={{ background: "rgba(240,192,64,0.12)", color: "#f0c040" }}
+                  style={{
+                    background: "rgba(240,192,64,0.12)",
+                    color: "#f0c040",
+                  }}
                 >
                   <IoMailSharp className="text-xs" />
                 </div>
@@ -179,10 +204,17 @@ const Footer = () => {
             <h3 className="mb-1 font-bold text-white text-sm uppercase tracking-widest">
               Follow Us
             </h3>
-            <div className="h-0.5 w-8 rounded-full mb-5" style={{ background: "#f0c040" }} />
+            <div
+              className="h-0.5 w-8 rounded-full mb-5"
+              style={{ background: "#f0c040" }}
+            />
 
-            <p className="text-xs mb-5" style={{ color: "rgba(191,210,230,0.7)" }}>
-              Stay connected for news, updates, and highlights from our school community.
+            <p
+              className="text-xs mb-5"
+              style={{ color: "rgba(191,210,230,0.7)" }}
+            >
+              Stay connected for news, updates, and highlights from our school
+              community.
             </p>
 
             <div className="flex gap-3">
@@ -206,7 +238,8 @@ const Footer = () => {
                   }}
                   onMouseOut={(e) => {
                     e.currentTarget.style.background = "rgba(255,255,255,0.07)";
-                    e.currentTarget.style.borderColor = "rgba(255,255,255,0.10)";
+                    e.currentTarget.style.borderColor =
+                      "rgba(255,255,255,0.10)";
                     e.currentTarget.style.color = "rgba(191,210,230,0.8)";
                   }}
                 >
@@ -217,15 +250,22 @@ const Footer = () => {
 
             {/* Admission CTA */}
             <div className="mt-8">
-              <p className="text-xs mb-3" style={{ color: "rgba(191,210,230,0.6)" }}>
+              <p
+                className="text-xs mb-3"
+                style={{ color: "rgba(191,210,230,0.6)" }}
+              >
                 Ready to enrol your child?
               </p>
               <NavLink
                 to="/admission"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-bold text-xs transition-all duration-200"
                 style={{ background: "#f0c040", color: "#1a2e4a" }}
-                onMouseOver={(e) => (e.currentTarget.style.background = "#e8a820")}
-                onMouseOut={(e) => (e.currentTarget.style.background = "#f0c040")}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.background = "#e8a820")
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.background = "#f0c040")
+                }
               >
                 Apply Now →
               </NavLink>
@@ -242,8 +282,8 @@ const Footer = () => {
           }}
         >
           <p>
-            © {new Date().getFullYear()} Guardian Angel Nursery & Primary School
-            &nbsp;·&nbsp; All Rights Reserved.
+            © {new Date().getFullYear()} Guardian Angel Nursery & Primary
+            School &nbsp;·&nbsp; All Rights Reserved.
           </p>
           <div className="flex gap-4">
             <NavLink

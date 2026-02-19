@@ -122,7 +122,10 @@ const Curriculum = () => {
       {/* ── Intro ── */}
       <section className="max-w-6xl mx-auto px-6 lg:px-12 py-20">
         <div className="flex items-center gap-3 mb-4">
-          <span className="h-0.5 w-8 rounded-full" style={{ background: "#f0c040" }} />
+          <span
+            className="h-0.5 w-8 rounded-full"
+            style={{ background: "#f0c040" }}
+          />
           <span
             className="text-xs font-bold uppercase tracking-widest"
             style={{ color: "#f0c040" }}
@@ -134,25 +137,42 @@ const Curriculum = () => {
           <div>
             <h2
               className="text-3xl font-bold mb-5"
-              style={{ fontFamily: "'Georgia', serif", color: "#1a2e4a", lineHeight: 1.2 }}
+              style={{
+                fontFamily: "'Georgia', serif",
+                color: "#1a2e4a",
+                lineHeight: 1.2,
+              }}
             >
               A Dual Approach to Learning
             </h2>
             <p className="text-gray-500 leading-relaxed">
-              Our school runs a <strong className="text-gray-700">dual curriculum</strong> that
+              Our school runs a{" "}
+              <strong className="text-gray-700">dual curriculum</strong> that
               integrates the{" "}
-              <strong className="text-gray-700">Nigerian National Curriculum</strong> with the{" "}
-              <strong className="text-gray-700">Montessori method</strong>. This unique blend
-              ensures academic excellence while fostering independence, creativity, critical
-              thinking, and holistic child development.
+              <strong className="text-gray-700">
+                Nigerian National Curriculum
+              </strong>{" "}
+              with the{" "}
+              <strong className="text-gray-700">Montessori method</strong>. This
+              unique blend ensures academic excellence while fostering
+              independence, creativity, critical thinking, and holistic child
+              development.
             </p>
           </div>
 
           {/* Two-badge summary */}
           <div className="grid grid-cols-2 gap-4">
             {[
-              { icon: "🇳🇬", title: "Nigerian Curriculum", desc: "National academic standards & structured learning" },
-              { icon: "🌿", title: "Montessori Method", desc: "Child-led exploration & hands-on discovery" },
+              {
+                icon: "🇳🇬",
+                title: "Nigerian Curriculum",
+                desc: "National academic standards & structured learning",
+              },
+              {
+                icon: "🌿",
+                title: "Montessori Method",
+                desc: "Child-led exploration & hands-on discovery",
+              },
             ].map((item, i) => (
               <div
                 key={i}
@@ -161,7 +181,9 @@ const Curriculum = () => {
               >
                 <div
                   className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl"
-                  style={{ background: "linear-gradient(90deg, #f0c040, #e8a820)" }}
+                  style={{
+                    background: "linear-gradient(90deg, #f0c040, #e8a820)",
+                  }}
                 />
                 <div className="text-3xl mb-3 mt-1">{item.icon}</div>
                 <h4
@@ -170,7 +192,9 @@ const Curriculum = () => {
                 >
                   {item.title}
                 </h4>
-                <p className="text-xs text-gray-400 leading-relaxed">{item.desc}</p>
+                <p className="text-xs text-gray-400 leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -184,7 +208,10 @@ const Curriculum = () => {
             {/* Text */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <span className="h-0.5 w-8 rounded-full" style={{ background: "#f0c040" }} />
+                <span
+                  className="h-0.5 w-8 rounded-full"
+                  style={{ background: "#f0c040" }}
+                />
                 <span
                   className="text-xs font-bold uppercase tracking-widest"
                   style={{ color: "#f0c040" }}
@@ -194,16 +221,23 @@ const Curriculum = () => {
               </div>
               <h3
                 className="text-3xl font-bold mb-4"
-                style={{ fontFamily: "'Georgia', serif", color: "#1a2e4a", lineHeight: 1.2 }}
+                style={{
+                  fontFamily: "'Georgia', serif",
+                  color: "#1a2e4a",
+                  lineHeight: 1.2,
+                }}
               >
                 Nigerian Curriculum
               </h3>
-              <div className="h-0.5 w-10 rounded-full mb-5" style={{ background: "#f0c040" }} />
+              <div
+                className="h-0.5 w-10 rounded-full mb-5"
+                style={{ background: "#f0c040" }}
+              />
               <p className="text-gray-500 leading-relaxed mb-7 text-sm">
-                The Nigerian curriculum provides a strong academic foundation in literacy,
-                numeracy, science, and social studies. It ensures that our pupils meet
-                national standards while being prepared for secondary education and future
-                opportunities.
+                The Nigerian curriculum provides a strong academic foundation in
+                literacy, numeracy, science, and social studies. It ensures that
+                our pupils meet national standards while being prepared for
+                secondary education and future opportunities.
               </p>
 
               <div className="space-y-2">
@@ -211,10 +245,16 @@ const Curriculum = () => {
                   <div
                     key={i}
                     className="flex items-center gap-3 rounded-xl px-4 py-3"
-                    style={{ background: "#f9f6f0", border: "1px solid #e8e2d8" }}
+                    style={{
+                      background: "#f9f6f0",
+                      border: "1px solid #e8e2d8",
+                    }}
                   >
                     <span className="text-lg">{s.icon}</span>
-                    <span className="text-sm font-medium" style={{ color: "#1a2e4a" }}>
+                    <span
+                      className="text-sm font-medium"
+                      style={{ color: "#1a2e4a" }}
+                    >
                       {s.label}
                     </span>
                   </div>
@@ -226,7 +266,10 @@ const Curriculum = () => {
             <div className="relative">
               <div
                 className="absolute -top-4 -right-4 w-full h-full rounded-2xl pointer-events-none"
-                style={{ border: "3px solid rgba(240,192,64,0.35)", borderRadius: "1rem" }}
+                style={{
+                  border: "3px solid rgba(240,192,64,0.35)",
+                  borderRadius: "1rem",
+                }}
               />
               <img
                 src="https://cdn.pixabay.com/photo/2015/09/09/20/30/children-932115_1280.jpg"
@@ -247,7 +290,10 @@ const Curriculum = () => {
             <div className="relative order-2 md:order-1">
               <div
                 className="absolute -top-4 -left-4 w-full h-full rounded-2xl pointer-events-none"
-                style={{ border: "3px solid rgba(240,192,64,0.35)", borderRadius: "1rem" }}
+                style={{
+                  border: "3px solid rgba(240,192,64,0.35)",
+                  borderRadius: "1rem",
+                }}
               />
               <img
                 src="https://cdn.pixabay.com/photo/2018/01/14/12/59/child-3086710_1280.jpg"
@@ -260,7 +306,10 @@ const Curriculum = () => {
             {/* Text */}
             <div className="order-1 md:order-2">
               <div className="flex items-center gap-3 mb-4">
-                <span className="h-0.5 w-8 rounded-full" style={{ background: "#f0c040" }} />
+                <span
+                  className="h-0.5 w-8 rounded-full"
+                  style={{ background: "#f0c040" }}
+                />
                 <span
                   className="text-xs font-bold uppercase tracking-widest"
                   style={{ color: "#f0c040" }}
@@ -270,15 +319,23 @@ const Curriculum = () => {
               </div>
               <h3
                 className="text-3xl font-bold mb-4"
-                style={{ fontFamily: "'Georgia', serif", color: "#1a2e4a", lineHeight: 1.2 }}
+                style={{
+                  fontFamily: "'Georgia', serif",
+                  color: "#1a2e4a",
+                  lineHeight: 1.2,
+                }}
               >
                 Montessori Method
               </h3>
-              <div className="h-0.5 w-10 rounded-full mb-5" style={{ background: "#f0c040" }} />
+              <div
+                className="h-0.5 w-10 rounded-full mb-5"
+                style={{ background: "#f0c040" }}
+              />
               <p className="text-gray-500 leading-relaxed mb-7 text-sm">
-                The Montessori method nurtures independence, curiosity, and creativity.
-                Children learn at their own pace in a structured yet flexible environment
-                that encourages exploration and problem-solving.
+                The Montessori method nurtures independence, curiosity, and
+                creativity. Children learn at their own pace in a structured yet
+                flexible environment that encourages exploration and
+                problem-solving.
               </p>
 
               <div className="space-y-2">
@@ -289,7 +346,10 @@ const Curriculum = () => {
                     style={{ background: "white", border: "1px solid #e8e2d8" }}
                   >
                     <span className="text-lg">{p.icon}</span>
-                    <span className="text-sm font-medium" style={{ color: "#1a2e4a" }}>
+                    <span
+                      className="text-sm font-medium"
+                      style={{ color: "#1a2e4a" }}
+                    >
                       {p.label}
                     </span>
                   </div>
@@ -304,7 +364,10 @@ const Curriculum = () => {
       <section className="py-20" style={{ background: "white" }}>
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
           <div className="flex items-center gap-3 mb-4">
-            <span className="h-0.5 w-8 rounded-full" style={{ background: "#f0c040" }} />
+            <span
+              className="h-0.5 w-8 rounded-full"
+              style={{ background: "#f0c040" }}
+            />
             <span
               className="text-xs font-bold uppercase tracking-widest"
               style={{ color: "#f0c040" }}
@@ -321,8 +384,9 @@ const Curriculum = () => {
             </h2>
           </div>
           <p className="text-gray-500 leading-relaxed max-w-2xl mb-12 text-sm">
-            Our curriculum is complemented by a wide range of enrichment programmes that
-            ensure every child grows into a well-rounded individual.
+            Our curriculum is complemented by a wide range of enrichment
+            programmes that ensure every child grows into a well-rounded
+            individual.
           </p>
 
           <div className="grid gap-6 sm:grid-cols-3">
@@ -346,14 +410,19 @@ const Curriculum = () => {
                   />
                   <div
                     className="absolute top-0 left-0 right-0 h-1"
-                    style={{ background: "linear-gradient(90deg, #f0c040, #e8a820)" }}
+                    style={{
+                      background: "linear-gradient(90deg, #f0c040, #e8a820)",
+                    }}
                   />
                 </div>
 
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
                     <span className="text-2xl">{item.icon}</span>
-                    <div className="h-0.5 flex-1 rounded-full" style={{ background: "#f0c040" }} />
+                    <div
+                      className="h-0.5 flex-1 rounded-full"
+                      style={{ background: "#f0c040" }}
+                    />
                   </div>
                   <h4
                     className="font-bold text-lg mb-2"
@@ -361,7 +430,9 @@ const Curriculum = () => {
                   >
                     {item.title}
                   </h4>
-                  <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
               </div>
             ))}
@@ -372,12 +443,15 @@ const Curriculum = () => {
       {/* ── CTA ── */}
       <section
         className="py-20 relative overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #1a2e4a 0%, #2d4a73 100%)" }}
+        style={{
+          background: "linear-gradient(135deg, #1a2e4a 0%, #2d4a73 100%)",
+        }}
       >
         <div
           className="absolute -top-20 -right-20 w-80 h-80 rounded-full pointer-events-none"
           style={{
-            background: "radial-gradient(circle, rgba(240,192,64,0.08), transparent 70%)",
+            background:
+              "radial-gradient(circle, rgba(240,192,64,0.08), transparent 70%)",
           }}
         />
         <div className="relative max-w-3xl mx-auto px-6 text-center">
@@ -403,7 +477,9 @@ const Curriculum = () => {
               href="/admission"
               className="px-8 py-3 rounded-full font-bold text-sm transition-all duration-200"
               style={{ background: "#f0c040", color: "#1a2e4a" }}
-              onMouseOver={(e) => (e.currentTarget.style.background = "#e8a820")}
+              onMouseOver={(e) =>
+                (e.currentTarget.style.background = "#e8a820")
+              }
               onMouseOut={(e) => (e.currentTarget.style.background = "#f0c040")}
             >
               Apply Now

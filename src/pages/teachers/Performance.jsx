@@ -1,8 +1,14 @@
 // CheckPerformanceSection.js
-import React from 'react';
-import Sidebar from './Sidebar';
-import { PerformanceContainer, Content, PerformanceContent, PerformanceHeader, SchoolPerformance, IndividualPerformance } 
-from '../../styles/PerformanceStyles'; 
+import React from "react";
+import Sidebar from "./Sidebar";
+import {
+  PerformanceContainer,
+  Content,
+  PerformanceContent,
+  PerformanceHeader,
+  SchoolPerformance,
+  IndividualPerformance,
+} from "../../styles/PerformanceStyles";
 
 const TeacherPerformanceSection = () => {
   // Sample data for school performance
@@ -13,9 +19,9 @@ const TeacherPerformanceSection = () => {
 
   // Sample data for individual student performance
   const individualPerformanceData = [
-    { id: 1, name: 'John Doe', score: 90 },
-    { id: 2, name: 'Jane Smith', score: 85 },
-    { id: 3, name: 'Michael Johnson', score: 92 },
+    { id: 1, name: "John Doe", score: 90 },
+    { id: 2, name: "Jane Smith", score: 85 },
+    { id: 3, name: "Michael Johnson", score: 92 },
   ];
 
   return (

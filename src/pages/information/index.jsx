@@ -115,14 +115,20 @@ export default function InformationPage() {
           preserveAspectRatio="none"
           style={{ height: 48, marginBottom: -2 }}
         >
-          <path d="M0,0 C480,60 960,60 1440,0 L1440,60 L0,60 Z" fill="#f9f6f0" />
+          <path
+            d="M0,0 C480,60 960,60 1440,0 L1440,60 L0,60 Z"
+            fill="#f9f6f0"
+          />
         </svg>
       </section>
 
       {/* ── Downloads ── */}
       <section className="max-w-6xl mx-auto px-6 lg:px-12 py-20">
         <div className="flex items-center gap-3 mb-4">
-          <span className="h-0.5 w-8 rounded-full" style={{ background: "#f0c040" }} />
+          <span
+            className="h-0.5 w-8 rounded-full"
+            style={{ background: "#f0c040" }}
+          />
           <span
             className="text-xs font-bold uppercase tracking-widest"
             style={{ color: "#f0c040" }}
@@ -244,8 +250,8 @@ export default function InformationPage() {
                 curricula — structured learning meets child-centered discovery.
               </p>
               <p className="text-gray-500 leading-relaxed">
-                Our rates are significantly below the average private school fees
-                in Abuja, making quality early education available to every
+                Our rates are significantly below the average private school
+                fees in Abuja, making quality early education available to every
                 family that values their child's future.
               </p>
             </div>
@@ -253,9 +259,18 @@ export default function InformationPage() {
             {/* Fee highlights */}
             <div className="space-y-4">
               {[
-                { label: "Pocket-Friendly Rates", desc: "Below average Abuja private school fees." },
-                { label: "No Hidden Charges", desc: "Transparent billing with no surprises." },
-                { label: "Flexible Payment Plans", desc: "Contact us to discuss payment options." },
+                {
+                  label: "Pocket-Friendly Rates",
+                  desc: "Below average Abuja private school fees.",
+                },
+                {
+                  label: "No Hidden Charges",
+                  desc: "Transparent billing with no surprises.",
+                },
+                {
+                  label: "Flexible Payment Plans",
+                  desc: "Contact us to discuss payment options.",
+                },
               ].map((item, i) => (
                 <div
                   key={i}
@@ -367,7 +382,8 @@ export default function InformationPage() {
           </div>
 
           <p className="text-gray-400 text-xs mt-6 text-center">
-            * Dates are subject to change. Please download the full academic calendar for confirmed dates.
+            * Dates are subject to change. Please download the full academic
+            calendar for confirmed dates.
           </p>
         </div>
       </section>
@@ -412,9 +428,7 @@ export default function InformationPage() {
               onMouseOver={(e) =>
                 (e.currentTarget.style.background = "#e8a820")
               }
-              onMouseOut={(e) =>
-                (e.currentTarget.style.background = "#f0c040")
-              }
+              onMouseOut={(e) => (e.currentTarget.style.background = "#f0c040")}
             >
               Download Form
             </a>
@@ -422,9 +436,7 @@ export default function InformationPage() {
               href="/contact-us"
               className="px-8 py-3 rounded-full font-bold text-sm border-2 transition-all duration-200"
               style={{ borderColor: "rgba(255,255,255,0.35)", color: "white" }}
-              onMouseOver={(e) =>
-                (e.currentTarget.style.borderColor = "white")
-              }
+              onMouseOver={(e) => (e.currentTarget.style.borderColor = "white")}
               onMouseOut={(e) =>
                 (e.currentTarget.style.borderColor = "rgba(255,255,255,0.35)")
               }

@@ -1,5 +1,5 @@
 // AdminDashboardStyles.js
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const AdminDashboardContainer = styled.div`
   display: flex;
@@ -8,7 +8,8 @@ export const AdminDashboardContainer = styled.div`
 export const Content = styled.div`
   flex: 1;
   padding: 20px;
-  margin-left: ${({ isOpen }) => (isOpen ? '250px' : '80px')}; /* Adjust margin based on sidebar state */
+  margin-left: ${({ isOpen }) =>
+    isOpen ? "250px" : "80px"}; /* Adjust margin based on sidebar state */
   transition: margin-left 0.3s ease;
 `;
 
@@ -57,7 +58,7 @@ export const Card = styled.div`
 export const CardTitle = styled.h3`
   font-size: 18px;
   margin-bottom: 10px;
-  color: #007bff; 
+  color: #007bff;
 `;
 
 export const CardContent = styled.p`
@@ -70,9 +71,7 @@ export const StudentDashboardContainer = styled.div`
   padding-left: 240px;
 `;
 
-
 export const TeacherDashboardContainer = styled.div`
   display: flex;
   padding-left: 240px;
 `;
-

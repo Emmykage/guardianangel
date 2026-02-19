@@ -39,15 +39,8 @@ const Navbar = () => {
         { label: "Curriculum", path: "/curriculum" },
         { label: "Tuition Fees", path: "/tuition-fees" },
       ],
-
-
     },
 
-     {
-      label: "Portal",
-      path: "/portal",
-     
-    },
     { label: "Contact Us", path: "/contact-us" },
   ];
 
@@ -56,9 +49,9 @@ const Navbar = () => {
       <header
         className="fixed top-0 w-full z-50 transition-all duration-300"
         style={{
-          background: scrolled ? 
-            "rgba(26, 46, 74, 0.97)"
-           : "linear-gradient(135deg, white 0%, #2d4a73 60%, #1a3a5c 100%)",
+          background: scrolled
+            ? "rgba(26, 46, 74, 0.97)"
+            : "linear-gradient(135deg, white 0%, #2d4a73 60%, #1a3a5c 100%)",
           backdropFilter: scrolled ? "blur(12px)" : "none",
           boxShadow: scrolled ? "0 4px 24px rgba(26,46,74,0.25)" : "none",
           fontFamily: "system-ui, sans-serif",
@@ -67,7 +60,9 @@ const Navbar = () => {
         {/* Top accent line */}
         <div
           className="w-full h-0.5"
-          style={{ background: "linear-gradient(90deg, #f0c040, #e8a820, #f0c040)" }}
+          style={{
+            background: "linear-gradient(90deg, #f0c040, #e8a820, #f0c040)",
+          }}
         />
 
         <nav className="flex w-full justify-between items-center px-6 md:px-12 py-3">
@@ -108,7 +103,11 @@ const Navbar = () => {
                       stroke="currentColor"
                       strokeWidth={2.5}
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M19 9l-7 7-7-7"
+                      />
                     </svg>
                   )}
                 </NavLink>
@@ -120,7 +119,10 @@ const Navbar = () => {
                     style={{
                       opacity: openDropdown === i ? 1 : 0,
                       pointerEvents: openDropdown === i ? "auto" : "none",
-                      transform: openDropdown === i ? "translateY(0)" : "translateY(-6px)",
+                      transform:
+                        openDropdown === i
+                          ? "translateY(0)"
+                          : "translateY(-6px)",
                     }}
                   >
                     <div
@@ -132,7 +134,10 @@ const Navbar = () => {
                       }}
                     >
                       {/* Gold accent top */}
-                      <div className="h-0.5 mx-3 mb-1 rounded-full" style={{ background: "#f0c040" }} />
+                      <div
+                        className="h-0.5 mx-3 mb-1 rounded-full"
+                        style={{ background: "#f0c040" }}
+                      />
                       {link.submenu.map((sub, j) => (
                         <li key={j}>
                           <NavLink
@@ -164,10 +169,28 @@ const Navbar = () => {
                   color: "#1a2e4a",
                   letterSpacing: "0.01em",
                 }}
-                onMouseOver={(e) => (e.currentTarget.style.background = "#e8a820")}
-                onMouseOut={(e) => (e.currentTarget.style.background = "#f0c040")}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.background = "#e8a820")
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.background = "#f0c040")
+                }
               >
                 Apply Now
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to={"/portal"}
+                className={({ isActive }) =>
+                  `flex items-center gap-1 px-4 py-2 rounded-lg transition-all duration-150 ${
+                    isActive
+                      ? "text-yellow-300 font-semibold"
+                      : "text-blue-100 hover:text-white hover:bg-white/10"
+                  }`
+                }
+              >
+                Portal
               </NavLink>
             </li>
           </ul>
@@ -179,7 +202,11 @@ const Navbar = () => {
             onClick={() => setToggle(!toggle)}
             aria-label="Toggle menu"
           >
-            {toggle ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+            {toggle ? (
+              <AiOutlineClose size={20} />
+            ) : (
+              <AiOutlineMenu size={20} />
+            )}
           </button>
         </nav>
       </header>
@@ -189,7 +216,10 @@ const Navbar = () => {
         className={`fixed inset-0 z-40 sm:hidden transition-all duration-300 ${
           toggle ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
-        style={{ background: "rgba(26,46,74,0.5)", backdropFilter: "blur(4px)" }}
+        style={{
+          background: "rgba(26,46,74,0.5)",
+          backdropFilter: "blur(4px)",
+        }}
         onClick={() => setToggle(false)}
       />
 
@@ -222,7 +252,10 @@ const Navbar = () => {
         </div>
 
         {/* Gold line */}
-        <div className="h-0.5 mx-5 mb-5" style={{ background: "linear-gradient(90deg, #f0c040, transparent)" }} />
+        <div
+          className="h-0.5 mx-5 mb-5"
+          style={{ background: "linear-gradient(90deg, #f0c040, transparent)" }}
+        />
 
         <div className="flex flex-col gap-1 px-4 overflow-y-auto">
           {navLinks.map((link, i) => (
@@ -240,8 +273,18 @@ const Navbar = () => {
               >
                 {link.label}
                 {link.submenu && (
-                  <svg className="w-3.5 h-3.5 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  <svg
+                    className="w-3.5 h-3.5 opacity-50"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2.5}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M9 5l7 7-7 7"
+                    />
                   </svg>
                 )}
               </NavLink>
@@ -249,7 +292,10 @@ const Navbar = () => {
               {link.submenu && (
                 <div
                   className="ml-3 mb-1 flex flex-col rounded-lg overflow-hidden"
-                  style={{ background: "rgba(255,255,255,0.05)", borderLeft: "2px solid #f0c040" }}
+                  style={{
+                    background: "rgba(255,255,255,0.05)",
+                    borderLeft: "2px solid #f0c040",
+                  }}
                 >
                   {link.submenu.map((sub, j) => (
                     <NavLink

@@ -1,9 +1,8 @@
 // TeachersStyles.js
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const TeachersContainer = styled.div`
   display: flex;
-  
 `;
 
 export const Content = styled.div`

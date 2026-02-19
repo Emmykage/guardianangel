@@ -10,7 +10,12 @@ const terms = [
     begins: "8th September 2025",
     ends: "12th December 2025",
     duration: "14 weeks",
-    highlights: ["Welcome Assembly", "Mid-term Break", "End of Term Exams", "Christmas Break"],
+    highlights: [
+      "Welcome Assembly",
+      "Mid-term Break",
+      "End of Term Exams",
+      "Christmas Break",
+    ],
   },
   {
     number: "02",
@@ -19,7 +24,12 @@ const terms = [
     begins: "12th January 2026",
     ends: "27th March 2026",
     duration: "11 weeks",
-    highlights: ["New Year Assembly", "Mid-term Break", "End of Term Exams", "Easter Break"],
+    highlights: [
+      "New Year Assembly",
+      "Mid-term Break",
+      "End of Term Exams",
+      "Easter Break",
+    ],
   },
   {
     number: "03",
@@ -28,7 +38,12 @@ const terms = [
     begins: "20th April 2026",
     ends: "17th July 2026",
     duration: "13 weeks",
-    highlights: ["Sports Day", "Cultural Day", "Prize Giving", "Graduation & Closing"],
+    highlights: [
+      "Sports Day",
+      "Cultural Day",
+      "Prize Giving",
+      "Graduation & Closing",
+    ],
   },
 ];
 
@@ -95,8 +110,8 @@ const SchoolCalendar = () => {
             Academic Session Calendar
           </h1>
           <p className="text-blue-200 text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            Stay updated with key term dates and academic events for the
-            2025 / 2026 session.
+            Stay updated with key term dates and academic events for the 2025 /
+            2026 session.
           </p>
           <a
             href={calendarYear}
@@ -106,8 +121,18 @@ const SchoolCalendar = () => {
             onMouseOver={(e) => (e.currentTarget.style.background = "#e8a820")}
             onMouseOut={(e) => (e.currentTarget.style.background = "#f0c040")}
           >
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3"
+              />
             </svg>
             Download Full Calendar
           </a>
@@ -119,14 +144,20 @@ const SchoolCalendar = () => {
           preserveAspectRatio="none"
           style={{ height: 48, marginBottom: -2 }}
         >
-          <path d="M0,0 C480,60 960,60 1440,0 L1440,60 L0,60 Z" fill="#f9f6f0" />
+          <path
+            d="M0,0 C480,60 960,60 1440,0 L1440,60 L0,60 Z"
+            fill="#f9f6f0"
+          />
         </svg>
       </section>
 
       {/* ── Session heading ── */}
       <section className="max-w-6xl mx-auto px-6 lg:px-12 py-16">
         <div className="flex items-center gap-3 mb-4">
-          <span className="h-0.5 w-8 rounded-full" style={{ background: "#f0c040" }} />
+          <span
+            className="h-0.5 w-8 rounded-full"
+            style={{ background: "#f0c040" }}
+          />
           <span
             className="text-xs font-bold uppercase tracking-widest"
             style={{ color: "#f0c040" }}
@@ -176,13 +207,20 @@ const SchoolCalendar = () => {
                   <span className="text-3xl">{term.season}</span>
                   <span
                     className="text-xs font-bold px-2.5 py-1 rounded-full"
-                    style={{ background: "#f9f6f0", color: "#1a2e4a", border: "1px solid #e8e2d8" }}
+                    style={{
+                      background: "#f9f6f0",
+                      color: "#1a2e4a",
+                      border: "1px solid #e8e2d8",
+                    }}
                   >
                     {term.duration}
                   </span>
                 </div>
 
-                <div className="h-0.5 w-8 rounded-full mb-3" style={{ background: "#f0c040" }} />
+                <div
+                  className="h-0.5 w-8 rounded-full mb-3"
+                  style={{ background: "#f0c040" }}
+                />
 
                 <h3
                   className="text-xl font-bold mb-4"
@@ -200,7 +238,10 @@ const SchoolCalendar = () => {
                     >
                       Start
                     </span>
-                    <span className="h-px flex-1" style={{ background: "#e8e2d8" }} />
+                    <span
+                      className="h-px flex-1"
+                      style={{ background: "#e8e2d8" }}
+                    />
                     <span className="text-sm text-gray-600">{term.begins}</span>
                   </div>
                   <div className="flex items-center gap-3">
@@ -210,7 +251,10 @@ const SchoolCalendar = () => {
                     >
                       End
                     </span>
-                    <span className="h-px flex-1" style={{ background: "#e8e2d8" }} />
+                    <span
+                      className="h-px flex-1"
+                      style={{ background: "#e8e2d8" }}
+                    />
                     <span className="text-sm text-gray-600">{term.ends}</span>
                   </div>
                 </div>
@@ -228,7 +272,10 @@ const SchoolCalendar = () => {
                   </p>
                   <ul className="space-y-1.5">
                     {term.highlights.map((h, j) => (
-                      <li key={j} className="flex items-center gap-2 text-sm text-gray-500">
+                      <li
+                        key={j}
+                        className="flex items-center gap-2 text-sm text-gray-500"
+                      >
                         <span
                           className="w-1.5 h-1.5 rounded-full flex-shrink-0"
                           style={{ background: "#f0c040" }}
@@ -248,7 +295,10 @@ const SchoolCalendar = () => {
       <section className="py-16" style={{ background: "white" }}>
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
           <div className="flex items-center gap-3 mb-4">
-            <span className="h-0.5 w-8 rounded-full" style={{ background: "#f0c040" }} />
+            <span
+              className="h-0.5 w-8 rounded-full"
+              style={{ background: "#f0c040" }}
+            />
             <span
               className="text-xs font-bold uppercase tracking-widest"
               style={{ color: "#f0c040" }}
@@ -266,20 +316,60 @@ const SchoolCalendar = () => {
           <div className="space-y-4">
             {[
               { period: "Sep 2025", event: "First Term Opens", type: "term" },
-              { period: "Oct 2025", event: "First Term Mid-Break", type: "break" },
-              { period: "Dec 2025", event: "First Term Closes · Christmas Holiday", type: "holiday" },
+              {
+                period: "Oct 2025",
+                event: "First Term Mid-Break",
+                type: "break",
+              },
+              {
+                period: "Dec 2025",
+                event: "First Term Closes · Christmas Holiday",
+                type: "holiday",
+              },
               { period: "Jan 2026", event: "Second Term Opens", type: "term" },
-              { period: "Feb 2026", event: "Second Term Mid-Break", type: "break" },
-              { period: "Mar 2026", event: "Second Term Closes · Easter Holiday", type: "holiday" },
+              {
+                period: "Feb 2026",
+                event: "Second Term Mid-Break",
+                type: "break",
+              },
+              {
+                period: "Mar 2026",
+                event: "Second Term Closes · Easter Holiday",
+                type: "holiday",
+              },
               { period: "Apr 2026", event: "Third Term Opens", type: "term" },
-              { period: "Jun 2026", event: "Sports Day & Cultural Day", type: "event" },
-              { period: "Jul 2026", event: "Prize Giving · Graduation · Long Holiday", type: "holiday" },
+              {
+                period: "Jun 2026",
+                event: "Sports Day & Cultural Day",
+                type: "event",
+              },
+              {
+                period: "Jul 2026",
+                event: "Prize Giving · Graduation · Long Holiday",
+                type: "holiday",
+              },
             ].map((row, i) => {
               const colors = {
-                term: { bg: "rgba(26,46,74,0.08)", dot: "#1a2e4a", text: "#1a2e4a" },
-                break: { bg: "rgba(240,192,64,0.12)", dot: "#f0c040", text: "#b8860b" },
-                holiday: { bg: "rgba(16,185,129,0.08)", dot: "#10b981", text: "#065f46" },
-                event: { bg: "rgba(139,92,246,0.08)", dot: "#8b5cf6", text: "#5b21b6" },
+                term: {
+                  bg: "rgba(26,46,74,0.08)",
+                  dot: "#1a2e4a",
+                  text: "#1a2e4a",
+                },
+                break: {
+                  bg: "rgba(240,192,64,0.12)",
+                  dot: "#f0c040",
+                  text: "#b8860b",
+                },
+                holiday: {
+                  bg: "rgba(16,185,129,0.08)",
+                  dot: "#10b981",
+                  text: "#065f46",
+                },
+                event: {
+                  bg: "rgba(139,92,246,0.08)",
+                  dot: "#8b5cf6",
+                  text: "#5b21b6",
+                },
               };
               const c = colors[row.type];
               return (
@@ -298,8 +388,14 @@ const SchoolCalendar = () => {
                   >
                     {row.period}
                   </span>
-                  <span className="h-px flex-1" style={{ background: `${c.dot}33` }} />
-                  <span className="text-sm font-medium" style={{ color: "#1a2e4a" }}>
+                  <span
+                    className="h-px flex-1"
+                    style={{ background: `${c.dot}33` }}
+                  />
+                  <span
+                    className="text-sm font-medium"
+                    style={{ color: "#1a2e4a" }}
+                  >
                     {row.event}
                   </span>
                 </div>
@@ -315,8 +411,14 @@ const SchoolCalendar = () => {
               { label: "Holiday", color: "#10b981" },
               { label: "Special Event", color: "#8b5cf6" },
             ].map((l, i) => (
-              <div key={i} className="flex items-center gap-2 text-xs text-gray-500">
-                <span className="w-2 h-2 rounded-full" style={{ background: l.color }} />
+              <div
+                key={i}
+                className="flex items-center gap-2 text-xs text-gray-500"
+              >
+                <span
+                  className="w-2 h-2 rounded-full"
+                  style={{ background: l.color }}
+                />
                 {l.label}
               </div>
             ))}
@@ -327,11 +429,16 @@ const SchoolCalendar = () => {
       {/* ── CTA ── */}
       <section
         className="py-20 relative overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #1a2e4a 0%, #2d4a73 100%)" }}
+        style={{
+          background: "linear-gradient(135deg, #1a2e4a 0%, #2d4a73 100%)",
+        }}
       >
         <div
           className="absolute -bottom-16 -right-16 w-72 h-72 rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(240,192,64,0.08), transparent 70%)" }}
+          style={{
+            background:
+              "radial-gradient(circle, rgba(240,192,64,0.08), transparent 70%)",
+          }}
         />
         <div className="relative max-w-3xl mx-auto px-6 text-center">
           <p
@@ -347,8 +454,8 @@ const SchoolCalendar = () => {
             Download the Full Calendar
           </h2>
           <p className="text-blue-200 leading-relaxed mb-8 max-w-lg mx-auto">
-            Get the complete academic calendar with all term dates, holidays, and
-            key events for the 2025 / 2026 session as a PDF.
+            Get the complete academic calendar with all term dates, holidays,
+            and key events for the 2025 / 2026 session as a PDF.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
@@ -356,11 +463,23 @@ const SchoolCalendar = () => {
               download
               className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-bold text-sm transition-all duration-200"
               style={{ background: "#f0c040", color: "#1a2e4a" }}
-              onMouseOver={(e) => (e.currentTarget.style.background = "#e8a820")}
+              onMouseOver={(e) =>
+                (e.currentTarget.style.background = "#e8a820")
+              }
               onMouseOut={(e) => (e.currentTarget.style.background = "#f0c040")}
             >
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3"
+                />
               </svg>
               Download PDF
             </a>
@@ -369,7 +488,9 @@ const SchoolCalendar = () => {
               className="px-8 py-3 rounded-full font-bold text-sm border-2 transition-all duration-200"
               style={{ borderColor: "rgba(255,255,255,0.35)", color: "white" }}
               onMouseOver={(e) => (e.currentTarget.style.borderColor = "white")}
-              onMouseOut={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.35)")}
+              onMouseOut={(e) =>
+                (e.currentTarget.style.borderColor = "rgba(255,255,255,0.35)")
+              }
             >
               Contact Us →
             </a>

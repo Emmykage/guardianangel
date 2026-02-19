@@ -1,15 +1,22 @@
-import React from 'react'
-import { Content, PerformanceContainer, PerformanceGraphContainer, PerformanceHeader, PerformanceInfo, SidebarContainer, TotalMarks } from '../../styles/PerformanceStyles'
-import Sidebar from './Sidebar'
-import { Line } from 'react-chartjs-2'
+import React from "react";
+import {
+  Content,
+  PerformanceContainer,
+  PerformanceGraphContainer,
+  PerformanceHeader,
+  PerformanceInfo,
+  SidebarContainer,
+  TotalMarks,
+} from "../../styles/PerformanceStyles";
+import Sidebar from "./Sidebar";
+import { Line } from "react-chartjs-2";
 
 const StudentPerformanceSection = () => {
-
   const performanceData = {
     months: ["jan", "Feb", "Mar", "Apr", "May", "Jun"],
     marks: [98, 67, 56, 89, 67, 87, 66, 90],
-    totalMarks: 560
-  }
+    totalMarks: 560,
+  };
   const lineChartData = {
     labels: performanceData.months,
     datasets: [
@@ -19,14 +26,14 @@ const StudentPerformanceSection = () => {
         lineTension: 0.1,
         backgroundColor: "#007bff",
         borderColor: "#007bff",
-        data: performanceData.marks
-      }
-    ]
-  }
+        data: performanceData.marks,
+      },
+    ],
+  };
   return (
     <PerformanceContainer>
       <SidebarContainer>
-        <Sidebar/>
+        <Sidebar />
       </SidebarContainer>
       <Content>
         <PerformanceHeader>Performance</PerformanceHeader>
@@ -50,7 +57,7 @@ const StudentPerformanceSection = () => {
         </PerformanceInfo>
       </Content>
     </PerformanceContainer>
-  )
-}
+  );
+};
 
-export default StudentPerformanceSection
+export default StudentPerformanceSection;

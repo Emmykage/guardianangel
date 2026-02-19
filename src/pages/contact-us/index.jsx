@@ -1,4 +1,9 @@
-import { FaClock, FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import {
+  FaClock,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+} from "react-icons/fa";
 import Navbar from "../../components/nav/Navbar";
 
 const contactDetails = [
@@ -11,8 +16,8 @@ const contactDetails = [
   {
     icon: <FaPhoneAlt />,
     label: "Phone",
-    value: "+234 800 000 0000",
-    href: "tel:+2348000000000",
+    value: "+234 803 337 6983",
+    href: "tel:+2348033376983",
   },
   {
     icon: <FaEnvelope />,
@@ -104,7 +109,6 @@ const ContactUs = () => {
       {/* ── Contact Info + Form ── */}
       <section className="max-w-6xl mx-auto px-6 lg:px-12 py-20">
         <div className="grid md:grid-cols-2 gap-12 items-start">
-
           {/* Left — info */}
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -143,9 +147,7 @@ const ContactUs = () => {
                     (e.currentTarget.style.boxShadow =
                       "0 4px 16px rgba(26,46,74,0.08)")
                   }
-                  onMouseOut={(e) =>
-                    (e.currentTarget.style.boxShadow = "none")
-                  }
+                  onMouseOut={(e) => (e.currentTarget.style.boxShadow = "none")}
                 >
                   {/* Icon badge */}
                   <div

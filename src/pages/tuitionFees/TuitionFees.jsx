@@ -108,11 +108,13 @@ export default function TuitionFees() {
       {/* ── Main Content ── */}
       <section className="max-w-6xl mx-auto px-6 lg:px-12 py-20">
         <div className="grid md:grid-cols-2 gap-14 items-start">
-
           {/* Left — description + highlights */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <span className="h-0.5 w-8 rounded-full" style={{ background: "#f0c040" }} />
+              <span
+                className="h-0.5 w-8 rounded-full"
+                style={{ background: "#f0c040" }}
+              />
               <span
                 className="text-xs font-bold uppercase tracking-widest"
                 style={{ color: "#f0c040" }}
@@ -122,17 +124,27 @@ export default function TuitionFees() {
             </div>
             <h2
               className="text-3xl font-bold mb-4"
-              style={{ fontFamily: "'Georgia', serif", color: "#1a2e4a", lineHeight: 1.2 }}
+              style={{
+                fontFamily: "'Georgia', serif",
+                color: "#1a2e4a",
+                lineHeight: 1.2,
+              }}
             >
               World-Class Education at an Accessible Cost
             </h2>
-            <div className="h-0.5 w-10 rounded-full mb-5" style={{ background: "#f0c040" }} />
+            <div
+              className="h-0.5 w-10 rounded-full mb-5"
+              style={{ background: "#f0c040" }}
+            />
             <p className="text-gray-500 leading-relaxed mb-8 text-sm">
-              At <strong className="text-gray-700">Guardian Angel</strong>, we believe that
-              every child deserves access to high-quality education at an affordable cost.
-              Our tuition is pocket-friendly while delivering a unique blend of the{" "}
-              <strong className="text-gray-700">Nigerian and Montessori curricula</strong> —
-              structured learning meets child-centred discovery.
+              At <strong className="text-gray-700">Guardian Angel</strong>, we
+              believe that every child deserves access to high-quality education
+              at an affordable cost. Our tuition is pocket-friendly while
+              delivering a unique blend of the{" "}
+              <strong className="text-gray-700">
+                Nigerian and Montessori curricula
+              </strong>{" "}
+              — structured learning meets child-centred discovery.
             </p>
 
             <div className="grid grid-cols-1 gap-3">
@@ -155,7 +167,9 @@ export default function TuitionFees() {
                     >
                       {h.title}
                     </p>
-                    <p className="text-xs text-gray-400 leading-relaxed">{h.desc}</p>
+                    <p className="text-xs text-gray-400 leading-relaxed">
+                      {h.desc}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -183,7 +197,10 @@ export default function TuitionFees() {
               style={{ borderBottom: "1px solid #e8e2d8" }}
             >
               <div className="flex items-center gap-3 mb-1">
-                <span className="h-0.5 w-6 rounded-full" style={{ background: "#f0c040" }} />
+                <span
+                  className="h-0.5 w-6 rounded-full"
+                  style={{ background: "#f0c040" }}
+                />
                 <span
                   className="text-xs font-bold uppercase tracking-widest"
                   style={{ color: "#f0c040" }}
@@ -237,14 +254,19 @@ export default function TuitionFees() {
                 >
                   <div className="flex items-center gap-3">
                     <span className="text-lg">{row.icon}</span>
-                    <span className="text-sm font-medium" style={{ color: "#1a2e4a" }}>
+                    <span
+                      className="text-sm font-medium"
+                      style={{ color: "#1a2e4a" }}
+                    >
                       {row.category}
                     </span>
                   </div>
                   <div className="text-right">
                     <span
                       className="text-sm font-bold"
-                      style={{ color: row.fee === "Varies" ? "#94a3b8" : "#1a2e4a" }}
+                      style={{
+                        color: row.fee === "Varies" ? "#94a3b8" : "#1a2e4a",
+                      }}
                     >
                       {row.fee}
                     </span>
@@ -254,10 +276,13 @@ export default function TuitionFees() {
             </div>
 
             {/* Note */}
-            <div className="px-6 py-4" style={{ borderTop: "1px solid #e8e2d8" }}>
+            <div
+              className="px-6 py-4"
+              style={{ borderTop: "1px solid #e8e2d8" }}
+            >
               <p className="text-xs text-gray-400 leading-relaxed">
-                * Fees shown are per term. Prices are subject to review.
-                Contact our office for the most up-to-date fee schedule.
+                * Fees shown are per term. Prices are subject to review. Contact
+                our office for the most up-to-date fee schedule.
               </p>
             </div>
 
@@ -285,7 +310,10 @@ export default function TuitionFees() {
       <section className="py-16" style={{ background: "white" }}>
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
           <div className="flex items-center gap-3 mb-4">
-            <span className="h-0.5 w-8 rounded-full" style={{ background: "#f0c040" }} />
+            <span
+              className="h-0.5 w-8 rounded-full"
+              style={{ background: "#f0c040" }}
+            />
             <span
               className="text-xs font-bold uppercase tracking-widest"
               style={{ color: "#f0c040" }}
@@ -330,7 +358,9 @@ export default function TuitionFees() {
               >
                 <div
                   className="absolute top-0 left-0 right-0 h-1 rounded-t-xl"
-                  style={{ background: "linear-gradient(90deg, #f0c040, #e8a820)" }}
+                  style={{
+                    background: "linear-gradient(90deg, #f0c040, #e8a820)",
+                  }}
                 />
                 <div className="text-3xl mb-3 mt-1">{item.icon}</div>
                 <h4
@@ -339,7 +369,9 @@ export default function TuitionFees() {
                 >
                   {item.title}
                 </h4>
-                <p className="text-xs text-gray-400 leading-relaxed">{item.desc}</p>
+                <p className="text-xs text-gray-400 leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -349,12 +381,15 @@ export default function TuitionFees() {
       {/* ── CTA ── */}
       <section
         className="py-20 relative overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #1a2e4a 0%, #2d4a73 100%)" }}
+        style={{
+          background: "linear-gradient(135deg, #1a2e4a 0%, #2d4a73 100%)",
+        }}
       >
         <div
           className="absolute -bottom-16 -right-16 w-72 h-72 rounded-full pointer-events-none"
           style={{
-            background: "radial-gradient(circle, rgba(240,192,64,0.08), transparent 70%)",
+            background:
+              "radial-gradient(circle, rgba(240,192,64,0.08), transparent 70%)",
           }}
         />
         <div className="relative max-w-3xl mx-auto px-6 text-center">
@@ -379,7 +414,9 @@ export default function TuitionFees() {
               href="/contact-us"
               className="px-8 py-3 rounded-full font-bold text-sm transition-all duration-200"
               style={{ background: "#f0c040", color: "#1a2e4a" }}
-              onMouseOver={(e) => (e.currentTarget.style.background = "#e8a820")}
+              onMouseOver={(e) =>
+                (e.currentTarget.style.background = "#e8a820")
+              }
               onMouseOut={(e) => (e.currentTarget.style.background = "#f0c040")}
             >
               Contact Us

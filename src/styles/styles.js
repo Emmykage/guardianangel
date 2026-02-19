@@ -1,6 +1,6 @@
 // styles.js
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Navbar = styled.nav`
   // position: fixed;
@@ -11,7 +11,7 @@ export const Navbar = styled.nav`
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background-color: #6BD4E7;
+  background-color: #6bd4e7;
   color: black;
   font-family: Arial, sans-serif;
   z-index: 1000;

@@ -136,7 +136,9 @@ export default function TermDates() {
           <div
             key={i}
             className={`grid md:grid-cols-2 gap-12 items-start ${
-              i % 2 !== 0 ? "md:[&>*:first-child]:order-2 md:[&>*:last-child]:order-1" : ""
+              i % 2 !== 0
+                ? "md:[&>*:first-child]:order-2 md:[&>*:last-child]:order-1"
+                : ""
             }`}
           >
             {/* Text side */}
@@ -168,7 +170,10 @@ export default function TermDates() {
                 </h2>
               </div>
 
-              <div className="h-0.5 w-12 rounded-full mb-5" style={{ background: "#f0c040" }} />
+              <div
+                className="h-0.5 w-12 rounded-full mb-5"
+                style={{ background: "#f0c040" }}
+              />
 
               <p className="text-gray-500 leading-relaxed mb-6 text-sm">
                 {term.desc}
@@ -229,9 +234,10 @@ export default function TermDates() {
                     key={j}
                     className="flex items-center gap-3 rounded-lg px-4 py-3"
                     style={{
-                      background: j === 0 || j === term.dates.length - 1
-                        ? "rgba(26,46,74,0.04)"
-                        : "#f9f6f0",
+                      background:
+                        j === 0 || j === term.dates.length - 1
+                          ? "rgba(26,46,74,0.04)"
+                          : "#f9f6f0",
                       border: "1px solid #e8e2d8",
                     }}
                   >
@@ -330,9 +336,7 @@ export default function TermDates() {
               onMouseOver={(e) =>
                 (e.currentTarget.style.background = "#e8a820")
               }
-              onMouseOut={(e) =>
-                (e.currentTarget.style.background = "#f0c040")
-              }
+              onMouseOut={(e) => (e.currentTarget.style.background = "#f0c040")}
             >
               <svg
                 className="w-4 h-4"
@@ -353,9 +357,7 @@ export default function TermDates() {
               href="/contact-us"
               className="px-8 py-3 rounded-full font-bold text-sm border-2 transition-all duration-200"
               style={{ borderColor: "rgba(255,255,255,0.35)", color: "white" }}
-              onMouseOver={(e) =>
-                (e.currentTarget.style.borderColor = "white")
-              }
+              onMouseOver={(e) => (e.currentTarget.style.borderColor = "white")}
               onMouseOut={(e) =>
                 (e.currentTarget.style.borderColor = "rgba(255,255,255,0.35)")
               }

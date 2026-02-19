@@ -1,16 +1,24 @@
 // TeacherProfileSection.js
-import React, { useState } from 'react';
-import Sidebar from './Sidebar';
-import { ProfileContainer, SidebarContainer, Content, ProfileHeader, ProfileDetails, ProfileLabel, ProfileInfo, EditButton } 
-from '../../styles/SettingsProfileStyles'; 
+import React, { useState } from "react";
+import Sidebar from "./Sidebar";
+import {
+  ProfileContainer,
+  SidebarContainer,
+  Content,
+  ProfileHeader,
+  ProfileDetails,
+  ProfileLabel,
+  ProfileInfo,
+  EditButton,
+} from "../../styles/SettingsProfileStyles";
 
 const TeacherProfileSection = () => {
   const [teacherInfo, setTeacherInfo] = useState({
-    name: 'John Doe',
-    email: 'johndoe@example.com',
-    phone: '123-456-7890',
-    address: '123 Main St, City, Country',
-    qualification: 'Master of Education',
+    name: "John Doe",
+    email: "johndoe@example.com",
+    phone: "123-456-7890",
+    address: "123 Main St, City, Country",
+    qualification: "Master of Education",
   });
 
   return (

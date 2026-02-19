@@ -1,12 +1,12 @@
 // SettingsProfileStyles.js
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const ProfileContainer = styled.div`
   display: flex;
 `;
 
 export const SidebarContainer = styled.div`
-  flex: 0 0 250px; 
+  flex: 0 0 250px;
 `;
 
 export const Content = styled.div`

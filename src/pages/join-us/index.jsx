@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const JoinUs = () => {
-  return (
-    <div>index</div>
-  )
-}
+  return <div>index</div>;
+};
 
-export default JoinUs
+export default JoinUs;

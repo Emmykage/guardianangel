@@ -21,25 +21,38 @@ const highlights = [
 
 const WelcomePage = () => {
   return (
-    <main style={{ background: "#f9f6f0", fontFamily: "system-ui, sans-serif", color: "#1a2e4a" }}>
+    <main
+      style={{
+        background: "#f9f6f0",
+        fontFamily: "system-ui, sans-serif",
+        color: "#1a2e4a",
+      }}
+    >
       <Navbar />
 
       {/* ── Hero ── */}
       <section
         className="relative overflow-hidden pt-24"
         style={{
-          background: "linear-gradient(135deg, #1a2e4a 0%, #2d4a73 60%, #1a3a5c 100%)",
+          background:
+            "linear-gradient(135deg, #1a2e4a 0%, #2d4a73 60%, #1a3a5c 100%)",
           minHeight: "520px",
         }}
       >
         {/* Decorative blobs */}
         <div
           className="absolute -top-24 -right-24 w-96 h-96 rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(240,192,64,0.10), transparent 70%)" }}
+          style={{
+            background:
+              "radial-gradient(circle, rgba(240,192,64,0.10), transparent 70%)",
+          }}
         />
         <div
           className="absolute bottom-10 left-0 w-80 h-40 pointer-events-none"
-          style={{ background: "radial-gradient(ellipse, rgba(255,255,255,0.04), transparent)" }}
+          style={{
+            background:
+              "radial-gradient(ellipse, rgba(255,255,255,0.04), transparent)",
+          }}
         />
 
         <div className="relative max-w-6xl mx-auto px-6 lg:px-12 py-16 flex flex-col lg:flex-row items-center gap-12">
@@ -53,31 +66,47 @@ const WelcomePage = () => {
             </p>
             <h1
               className="text-4xl md:text-5xl font-bold text-white mb-6"
-              style={{ fontFamily: "'Georgia', serif", lineHeight: 1.15, letterSpacing: "-0.02em" }}
+              style={{
+                fontFamily: "'Georgia', serif",
+                lineHeight: 1.15,
+                letterSpacing: "-0.02em",
+              }}
             >
               Where Every Child <br /> Finds Their Wings
             </h1>
             <p className="text-blue-200 text-lg leading-relaxed mb-8 max-w-lg">
-              We are more than just a school — we are a family where children grow, learn,
-              and thrive. With a blend of the Nigerian and Montessori curricula, we nurture
-              every child to reach their full potential.
+              We are more than just a school — we are a family where children
+              grow, learn, and thrive. With a blend of the Nigerian and
+              Montessori curricula, we nurture every child to reach their full
+              potential.
             </p>
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <a
                 href="/admission"
                 className="px-7 py-3 rounded-full font-bold text-sm transition-all duration-200"
                 style={{ background: "#f0c040", color: "#1a2e4a" }}
-                onMouseOver={(e) => (e.currentTarget.style.background = "#e8a820")}
-                onMouseOut={(e) => (e.currentTarget.style.background = "#f0c040")}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.background = "#e8a820")
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.background = "#f0c040")
+                }
               >
                 Apply Now
               </a>
               <a
                 href="/about-us"
                 className="px-7 py-3 rounded-full font-bold text-sm border-2 transition-all duration-200"
-                style={{ borderColor: "rgba(255,255,255,0.35)", color: "white" }}
-                onMouseOver={(e) => (e.currentTarget.style.borderColor = "white")}
-                onMouseOut={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.35)")}
+                style={{
+                  borderColor: "rgba(255,255,255,0.35)",
+                  color: "white",
+                }}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.borderColor = "white")
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.borderColor = "rgba(255,255,255,0.35)")
+                }
               >
                 Discover More →
               </a>
@@ -88,7 +117,10 @@ const WelcomePage = () => {
           <div className="lg:w-1/2 relative">
             <div
               className="absolute -top-3 -right-3 w-full h-full rounded-2xl pointer-events-none"
-              style={{ border: "3px solid rgba(240,192,64,0.35)", borderRadius: "1rem" }}
+              style={{
+                border: "3px solid rgba(240,192,64,0.35)",
+                borderRadius: "1rem",
+              }}
             />
             <img
               src="https://images.unsplash.com/photo-1600880292089-90e1c9f9c4fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80"
@@ -106,7 +138,10 @@ const WelcomePage = () => {
           preserveAspectRatio="none"
           style={{ height: 48, marginBottom: -2 }}
         >
-          <path d="M0,0 C480,60 960,60 1440,0 L1440,60 L0,60 Z" fill="#f9f6f0" />
+          <path
+            d="M0,0 C480,60 960,60 1440,0 L1440,60 L0,60 Z"
+            fill="#f9f6f0"
+          />
         </svg>
       </section>
 
@@ -133,7 +168,10 @@ const WelcomePage = () => {
               >
                 {item.stat}
               </p>
-              <div className="h-0.5 w-8 rounded-full mx-auto mb-2" style={{ background: "#f0c040" }} />
+              <div
+                className="h-0.5 w-8 rounded-full mx-auto mb-2"
+                style={{ background: "#f0c040" }}
+              />
               <p className="text-sm text-gray-500 font-medium">{item.label}</p>
             </div>
           ))}
@@ -143,8 +181,14 @@ const WelcomePage = () => {
       {/* ── Warm Welcome ── */}
       <section className="max-w-6xl mx-auto px-6 lg:px-12 py-20">
         <div className="flex items-center gap-3 mb-4">
-          <span className="h-0.5 w-8 rounded-full" style={{ background: "#f0c040" }} />
-          <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "#f0c040" }}>
+          <span
+            className="h-0.5 w-8 rounded-full"
+            style={{ background: "#f0c040" }}
+          />
+          <span
+            className="text-xs font-bold uppercase tracking-widest"
+            style={{ color: "#f0c040" }}
+          >
             Our Welcome
           </span>
         </div>
@@ -155,10 +199,10 @@ const WelcomePage = () => {
           A Warm Welcome
         </h2>
         <p className="text-gray-500 leading-relaxed max-w-2xl mb-14 text-base">
-          At Guardian Angel, every child is seen as a unique individual with limitless
-          potential. Our dedicated teachers and caring staff are committed to providing a
-          holistic educational experience that balances academics, creativity, moral values,
-          and social development.
+          At Guardian Angel, every child is seen as a unique individual with
+          limitless potential. Our dedicated teachers and caring staff are
+          committed to providing a holistic educational experience that balances
+          academics, creativity, moral values, and social development.
         </p>
 
         <div className="grid gap-8 sm:grid-cols-2">
@@ -184,7 +228,8 @@ const WelcomePage = () => {
                 border: "1px solid #e8e2d8",
               }}
               onMouseOver={(e) =>
-                (e.currentTarget.style.boxShadow = "0 8px 32px rgba(26,46,74,0.12)")
+                (e.currentTarget.style.boxShadow =
+                  "0 8px 32px rgba(26,46,74,0.12)")
               }
               onMouseOut={(e) => (e.currentTarget.style.boxShadow = "none")}
             >
@@ -197,18 +242,25 @@ const WelcomePage = () => {
                 {/* Gold top bar on hover */}
                 <div
                   className="absolute top-0 left-0 right-0 h-1"
-                  style={{ background: "linear-gradient(90deg, #f0c040, #e8a820)" }}
+                  style={{
+                    background: "linear-gradient(90deg, #f0c040, #e8a820)",
+                  }}
                 />
               </div>
               <div className="p-7">
-                <div className="h-0.5 w-8 rounded-full mb-4" style={{ background: "#f0c040" }} />
+                <div
+                  className="h-0.5 w-8 rounded-full mb-4"
+                  style={{ background: "#f0c040" }}
+                />
                 <h3
                   className="text-xl font-bold mb-3"
                   style={{ fontFamily: "'Georgia', serif", color: "#1a2e4a" }}
                 >
                   {card.title}
                 </h3>
-                <p className="text-gray-500 leading-relaxed text-sm">{card.desc}</p>
+                <p className="text-gray-500 leading-relaxed text-sm">
+                  {card.desc}
+                </p>
               </div>
             </div>
           ))}
@@ -219,8 +271,14 @@ const WelcomePage = () => {
       <section className="py-20" style={{ background: "white" }}>
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
           <div className="flex items-center gap-3 mb-4">
-            <span className="h-0.5 w-8 rounded-full" style={{ background: "#f0c040" }} />
-            <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "#f0c040" }}>
+            <span
+              className="h-0.5 w-8 rounded-full"
+              style={{ background: "#f0c040" }}
+            />
+            <span
+              className="text-xs font-bold uppercase tracking-widest"
+              style={{ color: "#f0c040" }}
+            >
               Why Guardian Angel
             </span>
           </div>
@@ -241,19 +299,25 @@ const WelcomePage = () => {
                   border: "1px solid #e8e2d8",
                 }}
                 onMouseOver={(e) =>
-                  (e.currentTarget.style.boxShadow = "0 8px 32px rgba(26,46,74,0.10)")
+                  (e.currentTarget.style.boxShadow =
+                    "0 8px 32px rgba(26,46,74,0.10)")
                 }
                 onMouseOut={(e) => (e.currentTarget.style.boxShadow = "none")}
               >
                 <div className="text-3xl mb-4">{h.icon}</div>
-                <div className="h-0.5 w-8 rounded-full mb-4" style={{ background: "#f0c040" }} />
+                <div
+                  className="h-0.5 w-8 rounded-full mb-4"
+                  style={{ background: "#f0c040" }}
+                />
                 <h4
                   className="text-lg font-bold mb-2"
                   style={{ fontFamily: "'Georgia', serif", color: "#1a2e4a" }}
                 >
                   {h.title}
                 </h4>
-                <p className="text-gray-500 text-sm leading-relaxed">{h.desc}</p>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  {h.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -263,11 +327,16 @@ const WelcomePage = () => {
       {/* ── CTA Banner ── */}
       <section
         className="py-20 relative overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #1a2e4a 0%, #2d4a73 100%)" }}
+        style={{
+          background: "linear-gradient(135deg, #1a2e4a 0%, #2d4a73 100%)",
+        }}
       >
         <div
           className="absolute -top-20 -left-20 w-72 h-72 rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(240,192,64,0.08), transparent 70%)" }}
+          style={{
+            background:
+              "radial-gradient(circle, rgba(240,192,64,0.08), transparent 70%)",
+          }}
         />
         <div className="relative max-w-3xl mx-auto px-6 text-center">
           <p
@@ -283,15 +352,17 @@ const WelcomePage = () => {
             Give Your Child the Best Start
           </h2>
           <p className="text-blue-200 leading-relaxed mb-8 max-w-lg mx-auto">
-            Spaces are limited. Reach out to our admissions team today and take the
-            first step toward a brighter future for your child.
+            Spaces are limited. Reach out to our admissions team today and take
+            the first step toward a brighter future for your child.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href="/admission"
               className="px-8 py-3 rounded-full font-bold text-sm transition-all duration-200"
               style={{ background: "#f0c040", color: "#1a2e4a" }}
-              onMouseOver={(e) => (e.currentTarget.style.background = "#e8a820")}
+              onMouseOver={(e) =>
+                (e.currentTarget.style.background = "#e8a820")
+              }
               onMouseOut={(e) => (e.currentTarget.style.background = "#f0c040")}
             >
               Apply Now
@@ -301,7 +372,9 @@ const WelcomePage = () => {
               className="px-8 py-3 rounded-full font-bold text-sm border-2 transition-all duration-200"
               style={{ borderColor: "rgba(255,255,255,0.35)", color: "white" }}
               onMouseOver={(e) => (e.currentTarget.style.borderColor = "white")}
-              onMouseOut={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.35)")}
+              onMouseOut={(e) =>
+                (e.currentTarget.style.borderColor = "rgba(255,255,255,0.35)")
+              }
             >
               Contact Us →
             </a>

@@ -1,28 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-body{
-
-    font-family: "Roboto", serif;
-    font-size: 16px;
+body {
+  font-family: "Roboto", serif;
+  font-size: 16px;
 }
 
-.navlink ul{
-    display: none;
+.navlink ul {
+  display: none;
 }
 
-.navlink ul li a{
-    @apply hover:text-primary;
+.navlink ul li a {
+  @apply hover:text-primary;
 }
 
 .navlink:hover ul {
-    display: block;
+  display: block;
 }
 /* damn  */
 
-
 .bg-custom {
-    background-image:linear-gradient(to right, rgba(0,0,0,0.5), rgba(128, 128, 128, 0.363)), url("/src/assets/slider.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(128, 128, 128, 0.363)),
+    url("/src/assets/slider.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }

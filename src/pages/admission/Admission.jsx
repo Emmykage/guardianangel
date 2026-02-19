@@ -218,7 +218,9 @@ const Admission = () => {
                 </div>
               )}
 
-              <div className={`p-6 ${step.wide ? "md:flex md:items-start md:gap-8" : ""}`}>
+              <div
+                className={`p-6 ${step.wide ? "md:flex md:items-start md:gap-8" : ""}`}
+              >
                 {/* Step number badge */}
                 <div className="flex items-center gap-3 mb-4 flex-shrink-0">
                   <span
@@ -278,10 +280,26 @@ const Admission = () => {
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: "📄", label: "Birth Certificate", desc: "Original or certified copy of the child's birth certificate." },
-              { icon: "📷", label: "Passport Photograph", desc: "Two recent passport-sized photographs of the child." },
-              { icon: "🏫", label: "Previous School Records", desc: "Latest report card or transfer letter (where applicable)." },
-              { icon: "💉", label: "Immunisation Card", desc: "Up-to-date immunisation record for the child." },
+              {
+                icon: "📄",
+                label: "Birth Certificate",
+                desc: "Original or certified copy of the child's birth certificate.",
+              },
+              {
+                icon: "📷",
+                label: "Passport Photograph",
+                desc: "Two recent passport-sized photographs of the child.",
+              },
+              {
+                icon: "🏫",
+                label: "Previous School Records",
+                desc: "Latest report card or transfer letter (where applicable).",
+              },
+              {
+                icon: "💉",
+                label: "Immunisation Card",
+                desc: "Up-to-date immunisation record for the child.",
+              },
             ].map((doc, i) => (
               <div
                 key={i}
@@ -334,8 +352,8 @@ const Admission = () => {
             Ready to Apply?
           </h2>
           <p className="text-blue-200 leading-relaxed mb-8 max-w-lg mx-auto">
-            Our admissions team is happy to guide you through every step. Get
-            in touch today or download the registration form to get started.
+            Our admissions team is happy to guide you through every step. Get in
+            touch today or download the registration form to get started.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
@@ -345,9 +363,7 @@ const Admission = () => {
               onMouseOver={(e) =>
                 (e.currentTarget.style.background = "#e8a820")
               }
-              onMouseOut={(e) =>
-                (e.currentTarget.style.background = "#f0c040")
-              }
+              onMouseOut={(e) => (e.currentTarget.style.background = "#f0c040")}
             >
               Contact Us
             </a>
@@ -358,9 +374,7 @@ const Admission = () => {
                 borderColor: "rgba(255,255,255,0.35)",
                 color: "white",
               }}
-              onMouseOver={(e) =>
-                (e.currentTarget.style.borderColor = "white")
-              }
+              onMouseOver={(e) => (e.currentTarget.style.borderColor = "white")}
               onMouseOut={(e) =>
                 (e.currentTarget.style.borderColor = "rgba(255,255,255,0.35)")
               }

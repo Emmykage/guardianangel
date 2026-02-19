@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Children = () => {
-  return (
-    <div></div>
-  )
-}
+  return <div></div>;
+};
 
-export default Children
+export default Children;

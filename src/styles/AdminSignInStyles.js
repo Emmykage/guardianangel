@@ -1,12 +1,17 @@
 // AdminSignInStyles.js
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const AdminSignInContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(45deg, #FF69B4, #FFA07A, #90EE90); /* Gradient background */
+  background: linear-gradient(
+    45deg,
+    #ff69b4,
+    #ffa07a,
+    #90ee90
+  ); /* Gradient background */
   min-height: 100vh; /* Full height of the viewport */
 `;
 
@@ -37,7 +42,7 @@ export const SubmitButton = styled(Link)`
   margin-top: 20px;
   border: none;
   border-radius: 8px;
-  background-color: #FF4500;
+  background-color: #ff4500;
   color: white;
   font-size: 18px;
   text-decoration: none;
@@ -46,9 +51,9 @@ export const SubmitButton = styled(Link)`
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #FF6347;
+    background-color: #ff6347;
   }
-  
+
   @media screen and (max-width: 768px) {
     font-size: 16px;
   }

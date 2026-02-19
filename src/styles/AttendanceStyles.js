@@ -1,5 +1,5 @@
 // AttendanceStyles.js
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const AttendanceContainer = styled.div`
   display: flex;
@@ -58,7 +58,6 @@ export const SubmitButton = styled.button`
   cursor: pointer;
 `;
 
-
 export const SidebarContainer = styled.div`
   flex: 0 0 250px; /* Sidebar width */
 `;
@@ -69,5 +68,5 @@ export const AttendanceDate = styled.span`
 
 export const AttendanceStatus = styled.span`
   margin-left: 10px;
-  color: ${({ present }) => (present ? 'green' : 'red')};
+  color: ${({ present }) => (present ? "green" : "red")};
 `;

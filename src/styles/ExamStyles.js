@@ -1,5 +1,5 @@
 // ExamStyles.js
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const ExamContainer = styled.div`
   display: flex;

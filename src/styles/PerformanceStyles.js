@@ -1,5 +1,5 @@
 // PerformanceStyles.js
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const PerformanceContainer = styled.div`
   display: flex;
