@@ -62,8 +62,8 @@ export default function PortalLogin() {
       // Navigate to respective dashboard
       navigate(
         selectedRole === "teacher"
-          ? "/dashboard/teacher"
-          : "/dashboard/student",
+          ? "/teacher/dashboard"
+          : "/student/dashboard",
       );
     }, 1500);
   };

@@ -178,7 +178,18 @@ const Admission = () => {
           parents and pupils. Here is everything you need to know about joining
           the Guardian Angel family.
         </p>
+         <div className="my-4">
+                <a
+  href="/documents/PRIMARY_SCHOOL_ADMISSION_PACKAGE.pdf"
+  download
+  className="inline-flex items-center rounded-lg bg-purple-950 px-5 py-3 text-sm font-semibold text-white hover:bg-red-700"
+>
+  Download Admission form Document
+</a>
+
+      </div>
       </section>
+     
 
       {/* ── Steps Grid ── */}
       <section className="max-w-6xl mx-auto px-6 lg:px-12 pb-20">
