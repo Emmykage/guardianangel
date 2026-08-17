@@ -11,7 +11,6 @@ import StudentSignIn from "./components/StudentSignin";
 import AdminSignIn from "./components/AdminSignin";
 import AdminDashboard from "./pages/admin/Dashboard";
 import StudentDashboard from "./pages/students/Dashboard";
-import TeacherDashboard from "./pages/teachers/Dashboard";
 import Classes from "./pages/admin/Classes";
 import Exam from "./pages/admin/Exam";
 import Attendance from "./pages/admin/Attendance";
@@ -41,7 +40,6 @@ import TeacherEventCalendar from "./pages/teachers/Events";
 import TeacherSettingsProfile from "./pages/teachers/Profile";
 import TeacherAnnouncement from "./pages/teachers/Announcement";
 import ErrorPage from "./pages/ErrorPage";
-import TeachersTeacher from "./pages/teachers/Teachers";
 import Home from "./pages";
 import MainLayout from "./layouts/MainLayout";
 import AboutUs from "./pages/about-us";
@@ -56,7 +54,19 @@ import InformationPage from "./pages/information";
 import MissionVisionPage from "./pages/missin-vission/MissionVission";
 import WelcomeMessage from "./pages/welcome/Welcome";
 import PortalLogin from "./pages/portal/PortalLogin";
-// import PortalLogin from '../../../../../Downloads/PortalLogin'
+import TeacherDashboard from "./pages/teachers/Overview";
+import Overview from "./pages/teachers/Overview";
+import TeacherLayout from "./layouts/TeacherLayout";
+import AddResult from "./pages/teachers/AddResult";
+import TeacherTest from "./pages/teachers/TeacherTest";
+import StudentOverview from "./pages/students/Overview";
+import StudentLayout from "./layouts/StudentLayout";
+import StudentResult from "./pages/students/Results";
+import Results from "./pages/students/Results";
+import StudentClasses from "./pages/students/Classes";
+import StudentTest from "./pages/students/Tests";
+import ClassDetails from "./pages/students/ClassDetails";
+// import TeacherTests from "./pages/teachers/tests";
 
 function App() {
   return (
@@ -187,7 +197,7 @@ function App() {
         {/* all dashboard routes  */}
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
         <Route path="/student/dashboard" element={<StudentDashboard />} />
-        <Route path="/teacher/dashboard" element={<TeacherDashboard />} />
+        {/* <Route path="/teacher/dashboard" element={<TeacherDashboard />} /> */}
 
         {/* admin sections */}
         <Route path="/admin/classes" element={<Classes />} />
@@ -203,37 +213,46 @@ function App() {
         <Route path="/admin/settings" element={<SettingsProfile />} />
 
         {/* student section */}
-        <Route path="/student/assignment" element={<StudentAssignment />} />
-        <Route
-          path="/student/announcement"
-          element={<StudentAnnouncementSection />}
-        />
-        <Route path="/student/profile" element={<StudentProfileSection />} />
-        <Route path="/student/attendance" element={<AttendanceSection />} />
-        <Route path="/student/exams" element={<StudentExamsSection />} />
-        <Route
-          path="/student/performance"
-          element={<StudentPerformanceSection />}
-        />
-        <Route path="/student/library" element={<StudentLibrarySection />} />
+        <Route path="/student" element={<StudentLayout />}>
+          <Route path="overview" element={<StudentOverview />} />
+          <Route path="classes/:id" element={<ClassDetails />} />
+          <Route path="/student/assignment" element={<StudentAssignment />} />
+          <Route
+            path="/student/announcement"
+            element={<StudentAnnouncementSection />}
+          />
+          <Route path="/student/profile" element={<StudentProfileSection />} />
+          <Route path="/student/attendance" element={<AttendanceSection />} />
+          <Route path="/student/exams" element={<StudentExamsSection />} />
+          <Route path="/student/tests" element={<StudentTest />} />{" "}
+          <Route path="classes" element={<StudentClasses />} />
+          <Route path="result" element={<Results />} />
+        </Route>
 
         {/* teacher section */}
-        <Route path="/teacher/classes" element={<TeacherClasses />} />
-        <Route path="/teacher/exams" element={<TeacherExames />} />
-        <Route path="/teacher/students" element={<TeacherStudent />} />
-        <Route path="/teacher/teachers" element={<TeachersTeacher />} />
-        <Route path="/teacher/assignments" element={<TeacherAssignment />} />
-        <Route
-          path="/teacher/performances"
-          element={<TeacherPerformanceSection />}
-        />
-        <Route path="/teacher/attendances" element={<TeacherAttendance />} />
-        <Route
-          path="/teacher/announcements"
-          element={<TeacherAnnouncement />}
-        />
-        <Route path="/teacher/events" element={<TeacherEventCalendar />} />
-        <Route path="/teacher/settings" element={<TeacherSettingsProfile />} />
+        <Route path="/teacher" element={<TeacherLayout />}>
+          <Route path="dashboard" element={<Overview />} />
+          <Route path="/teacher/add-result" element={<AddResult />} />
+          <Route path="/teacher/exams" element={<TeacherExames />} />
+          <Route path="/teacher/students" element={<TeacherStudent />} />
+          <Route path="/teacher/tests" element={<TeacherTest />} />
+          <Route path="/teacher/assignments" element={<TeacherAssignment />} />
+          <Route
+            path="/teacher/performances"
+            element={<TeacherPerformanceSection />}
+          />
+          <Route path="/teacher/attendances" element={<TeacherAttendance />} />
+          <Route
+            path="/teacher/announcements"
+            element={<TeacherAnnouncement />}
+          />
+          <Route path="/teacher/events" element={<TeacherEventCalendar />} />
+          <Route path="classes" element={<TeacherClasses />} />
+          <Route
+            path="/teacher/settings"
+            element={<TeacherSettingsProfile />}
+          />
+        </Route>
       </Routes>
     </div>
   );

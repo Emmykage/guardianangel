@@ -180,8 +180,7 @@ export default function PortalLogin() {
               color: "rgba(191,210,230,0.4)",
             }}
           >
-            © {new Date().getFullYear()} Guardian Angel Nursery & Primary
-            School
+            © {new Date().getFullYear()} Guardian Angel Nursery & Primary School
           </div>
         </div>
       </div>

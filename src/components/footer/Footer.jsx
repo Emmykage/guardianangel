@@ -282,8 +282,8 @@ const Footer = () => {
           }}
         >
           <p>
-            © {new Date().getFullYear()} Guardian Angel Nursery & Primary
-            School &nbsp;·&nbsp; All Rights Reserved.
+            © {new Date().getFullYear()} Guardian Angel Nursery & Primary School
+            &nbsp;·&nbsp; All Rights Reserved.
           </p>
           <div className="flex gap-4">
             <NavLink

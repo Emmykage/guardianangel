@@ -3,11 +3,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const SidebarContainer = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: ${({ isOpen }) => (isOpen ? "250px" : "80px")};
-  width: 250px;
+  width: ${({ isOpen }) => (isOpen ? "550px" : "800px")};
+  width: 2500px;
   height: 100%;
   background-color: #2c3e50; /* Dark blue background */
   color: white;
@@ -45,6 +42,9 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
   color: white;
   margin-left: 10px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
 `;
 
 export const SidebarIcon = styled.div`

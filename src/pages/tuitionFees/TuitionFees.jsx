@@ -93,14 +93,12 @@ export default function TuitionFees() {
         </div>
 
         <a
-  href="/documents/PRIMARY_SCHOOL_ADMISSION_PACKAGE.pdf"
-  download
-  className="inline-flex items-center rounded-lg bg-red-600 px-5 py-3 text-sm font-semibold text-white hover:bg-red-700"
->
-  Download Admission form Document
-</a>
-
-
+          href="/documents/PRIMARY_SCHOOL_ADMISSION_PACKAGE.pdf"
+          download
+          className="inline-flex items-center rounded-lg bg-red-600 px-5 py-3 text-sm font-semibold text-white hover:bg-red-700"
+        >
+          Download Admission form Document
+        </a>
 
         <svg
           className="w-full block relative"

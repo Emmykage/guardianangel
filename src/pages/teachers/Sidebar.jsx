@@ -27,32 +27,41 @@ const Sidebar = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <SidebarContainer style={{ width: isOpen ? "250px" : "80px" }}>
+    <SidebarContainer style={{ width: isOpen ? "350px" : "80px" }}>
       <SidebarHeader>{/* <Logo src="" /> */}</SidebarHeader>
+      <div>
+        <div className="flex items-center gap-3 mb-10 px-1">
+          <div className="flex items-center w-8 h-6 font-semibold justify-center rounded-full">
+            GA
+          </div>
+          <div>
+            <div
+              style={{
+                fontWeight: 600,
+                fontSize: 15,
+                lineHeight: 1.1,
+              }}
+            >
+              Greenway Academy
+            </div>
+            <div className="text-xs" style={{ color: "#8C97B3" }}>
+              Teacher Portal
+            </div>
+          </div>
+        </div>
+      </div>
       <SidebarNav>
         <SidebarNavItem>
           <SidebarIcon>
             <BsGraphUp />{" "}
           </SidebarIcon>
           <StyledLink to={"/teacher/dashboard"}>Dashboard</StyledLink>
-        </SidebarNavItem>
+        </SidebarNavItem>{" "}
         <SidebarNavItem>
           <SidebarIcon>
-            <BsGraphUp />{" "}
+            <BsGraphDown />{" "}
           </SidebarIcon>
-          <StyledLink to={"/teacher/classes"}>Classes</StyledLink>
-        </SidebarNavItem>
-        <SidebarNavItem>
-          <SidebarIcon>
-            <BsGraphUp />{" "}
-          </SidebarIcon>
-          <StyledLink to={"/teacher/students"}>Students</StyledLink>
-        </SidebarNavItem>
-        <SidebarNavItem>
-          <SidebarIcon>
-            <BsPeople />{" "}
-          </SidebarIcon>
-          <StyledLink to={"/teacher/teachers"}>Teachers</StyledLink>
+          <StyledLink to={"/teacher/add-result"}>Add Result</StyledLink>
         </SidebarNavItem>
         <SidebarNavItem>
           <SidebarIcon>
@@ -62,46 +71,34 @@ const Sidebar = () => {
         </SidebarNavItem>
         <SidebarNavItem>
           <SidebarIcon>
+            <BsGraphUp />{" "}
+          </SidebarIcon>
+          <StyledLink to={"/teacher/classes"}>Online Classes</StyledLink>
+        </SidebarNavItem>
+        <SidebarNavItem>
+          <SidebarIcon>
+            <BsPeople />{" "}
+          </SidebarIcon>
+          <StyledLink to={"/teacher/tests"}>Test</StyledLink>
+        </SidebarNavItem>
+        {/* <SidebarNavItem>
+          <SidebarIcon>
+            <BsGraphUp />{" "}
+          </SidebarIcon>
+          <StyledLink to={"/teacher/attendances"}>Attendance</StyledLink>
+        </SidebarNavItem> */}
+        {/* <SidebarNavItem>
+          <SidebarIcon>
             <BsBook />{" "}
           </SidebarIcon>
           <StyledLink to={"/teacher/exams"}>Exams</StyledLink>
         </SidebarNavItem>
         <SidebarNavItem>
           <SidebarIcon>
-            <BsGraphDown />{" "}
-          </SidebarIcon>
-          <StyledLink to={"/teacher/performances"}>Performance</StyledLink>
-        </SidebarNavItem>
-        <SidebarNavItem>
-          <SidebarIcon>
-            <BsGraphUp />{" "}
-          </SidebarIcon>
-          <StyledLink to={"/teacher/attendances"}>Attendance</StyledLink>
-        </SidebarNavItem>
-
-        {/* <SidebarNavItem>
-                <SidebarIcon><BsBook/> </SidebarIcon>
-                <StyledLink to={'/teacher/library'}>Library</StyledLink>
-            </SidebarNavItem> */}
-        <SidebarNavItem>
-          <SidebarIcon>
-            <BsChatDots />{" "}
-          </SidebarIcon>
-          <StyledLink to={"/teacher/announcements"}>Announcement</StyledLink>
-        </SidebarNavItem>
-        <SidebarNavItem>
-          <SidebarIcon>
-            <BsCalendarEvent />{" "}
-          </SidebarIcon>
-          <StyledLink to={"/teacher/events"}>Events and Calendar</StyledLink>
-        </SidebarNavItem>
-        <SidebarNavItem>
-          <SidebarIcon>
             <BsGear />{" "}
           </SidebarIcon>
           <StyledLink to={"/teacher/settings"}>Settings and Profile</StyledLink>
-        </SidebarNavItem>
-
+        </SidebarNavItem> */}
         <ToggleButton onClick={toggleSidebar}>
           <ToggleIcon isOpen={isOpen}></ToggleIcon>
         </ToggleButton>
